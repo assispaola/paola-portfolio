@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Paola Assis — Developer &amp; Designer</title>
+  <meta name="description" content="Frontend Engineer especializada em Angular, Design Systems e aplicações gamificadas. São Paulo, BR."/>
+  <link rel="canonical" href="https://paolaassis.com/"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <link rel="apple-touch-icon" href="/favicon.png"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://paolaassis.com/"/>
+  <meta property="og:title" content="Paola Assis — Developer &amp; Designer"/>
+  <meta property="og:description" content="Frontend Engineer especializada em Angular, Design Systems e aplicações gamificadas. São Paulo, BR."/>
+  <meta property="og:image" content="https://paolaassis.com/assets/img/og-image.png"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="pt_BR"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="/css/tokens.css"/>
+  <link rel="stylesheet" href="/css/base.css"/>
+  <link rel="stylesheet" href="/css/layout.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/animations.css"/>
+</head>
+<body>
+
+  <nav class="nav" data-nav>
+    <a href="#top" class="brand" aria-label="Paola Assis">
+      <span class="brand-mark">
+        <svg width="100" height="102" viewBox="0 0 100 102" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M64.6887 6.81375C65.5637 7.57824 66.3988 8.38017 67.233 9.18924C67.5216 9.45229 67.5216 9.45229 67.8161 9.72065C71.6443 13.3156 74.6897 19.3096 74.9858 24.6183C74.9928 24.9602 74.9928 24.9602 75 25.309C75.0059 25.4707 75.0118 25.6323 75.0179 25.7989C75.1035 28.2749 74.9762 30.5756 74.4548 32.9987C74.3643 33.4237 74.3643 33.4237 74.2718 33.8574C74.2047 34.0943 74.1375 34.3312 74.0682 34.5752C73.8769 36.009 74.6229 37.3271 75.1621 38.6172C75.2873 38.9248 75.412 39.2326 75.5364 39.5406C75.8682 40.3593 76.2048 41.176 76.5424 41.9922C76.8646 42.7729 77.1831 43.555 77.5016 44.3372C77.6304 44.6535 77.7593 44.9697 77.8881 45.286C77.9533 45.446 78.0185 45.606 78.0857 45.7709C78.2918 46.2763 78.4985 46.7815 78.7052 47.2867C79.959 50.3536 81.1847 53.4316 82.4067 56.5115C82.5088 56.7688 82.6109 57.0261 82.7161 57.2912C82.8191 57.5509 82.9222 57.8106 83.0284 58.0783C83.2393 58.6099 83.4503 59.1415 83.6612 59.6732C83.8199 60.073 83.8199 60.073 83.9817 60.4808C85.1652 63.4621 86.3556 66.4406 87.5465 69.4189C87.7655 69.9669 87.9845 70.5148 88.2035 71.0627C89.0848 73.2673 89.9662 75.4719 90.848 77.6763C93.1448 83.4183 95.4382 89.1617 97.7086 94.9143C97.9145 95.4358 98.1207 95.9571 98.3271 96.4783C98.6103 97.1935 98.8924 97.9091 99.1741 98.6249C99.2585 98.8374 99.3428 99.0499 99.4297 99.2688C99.5054 99.4619 99.5812 99.6551 99.6592 99.854C99.7255 100.022 99.7917 100.19 99.8599 100.363C100 100.779 100 100.779 100 101.267C97.2767 101.267 94.5534 101.267 91.7476 101.267C91.3946 100.353 91.3946 100.353 91.0346 99.4202C89.3783 95.1339 87.7134 90.8514 86.0134 86.5824C85.9372 86.3912 85.8611 86.2 85.7827 86.0031C84.8926 83.7674 84.0001 81.5326 83.1072 79.2981C82.6112 78.0568 82.1159 76.8152 81.6209 75.5735C81.3147 74.8054 81.0081 74.0374 80.7007 73.2697C80.3572 72.4113 80.0146 71.5525 79.6723 70.6935C79.5679 70.4333 79.4634 70.173 79.3558 69.9048C79.2612 69.667 79.1667 69.4293 79.0693 69.1843C78.9862 68.9763 78.903 68.7682 78.8174 68.5538C78.6408 68.0508 78.6408 68.0508 78.6408 67.5623C76.8373 67.5789 75.0339 67.601 73.2306 67.6264C72.6196 67.6344 72.0086 67.6413 71.3976 67.6469C64.4479 67.7125 57.7503 68.3042 51.4563 71.4701C51.2946 71.5507 51.1329 71.6313 50.9663 71.7143C44.387 75.0507 40.4683 80.5454 37.3786 87.1014C36.3046 86.9841 35.6932 86.7946 34.8908 86.0634C34.6486 85.85 34.6486 85.85 34.4015 85.6322C33.3701 84.4447 33.3626 83.129 33.388 81.6146C33.575 80.1073 34.2275 78.8916 34.9515 77.5761C35.0857 77.3236 35.2199 77.0711 35.3582 76.811C36.2848 75.1348 37.3574 73.6602 38.5922 72.2029C38.7358 72.0228 38.8795 71.8427 39.0274 71.6571C44.8208 64.6466 54.8088 61.1788 63.5544 60.3476C67.514 60.059 71.5183 60.1972 75.4854 60.2352C74.5892 57.8176 73.6819 55.4047 72.7549 52.9989C72.5725 52.5256 72.3906 52.0521 72.2087 51.5785C72.0874 51.2632 71.9661 50.9479 71.8447 50.6326C71.7561 50.4026 71.7561 50.4026 71.6658 50.168C71.3499 49.3502 71.0289 48.5349 70.7012 47.7219C70.5999 47.4698 70.5999 47.4698 70.4964 47.2127C70.3664 46.8902 70.2355 46.5679 70.1039 46.2461C69.6602 45.1461 69.6602 45.1461 69.6602 44.6039C69.5 44.6039 69.3398 44.6039 69.1748 44.6039C69.1147 44.7393 69.0546 44.8746 68.9927 45.0141C66.4921 49.6851 61.3951 53.0711 57.0388 55.8389C56.7813 56.0042 56.5238 56.1694 56.2585 56.3397C52.8003 58.4445 48.9587 59.9908 45.0698 61.0747C44.7428 61.1661 44.7428 61.1661 44.4092 61.2593C43.333 61.5402 42.3138 61.7322 41.2024 61.7884C39.1814 61.8459 39.1814 61.8459 37.4857 62.8108C36.7228 63.8969 36.2439 65.1179 35.7468 66.3436C35.1721 67.6978 34.4776 68.9913 33.7985 70.2947C33.6547 70.5747 33.5108 70.8546 33.3626 71.143C31.8884 73.9991 30.2886 76.7725 28.6408 79.53C28.5085 79.7535 28.3762 79.977 28.2398 80.2073C23.3215 88.4985 16.5364 98.556 6.70836 101.248C4.43936 101.816 2.35049 102 0 102C0 99.985 0 97.9701 0 95.894C0.931129 95.6976 0.931129 95.6976 1.88107 95.4971C10.1281 93.6091 15.9021 85.7392 20.1911 78.9194C23.9467 72.855 27.254 66.5327 30.405 60.1332C30.8262 59.278 31.2487 58.4236 31.6717 57.5693C32.7202 55.451 33.7668 53.3317 34.8125 51.2119C35.6303 49.5541 36.4487 47.8967 37.2693 46.2403C37.6195 45.5331 37.969 44.8256 38.3174 44.1175C47.8071 24.8289 47.8071 24.8289 54.0798 22.3533C56.0583 21.7928 58.1624 21.8809 59.9894 22.8447C60.1371 22.9325 60.2847 23.0204 60.4369 23.1109C60.6822 23.2519 60.9275 23.393 61.1802 23.5383C61.3354 23.639 61.4906 23.7398 61.6505 23.8436C61.3159 24.6236 60.9512 25.0632 60.3004 25.599C58.0162 27.5585 56.1604 29.7392 54.3689 32.1477C54.2554 32.2987 54.1419 32.4496 54.0249 32.6052C50.3539 37.5204 47.5761 43.0213 44.8062 48.4819C44.2151 49.6413 43.6117 50.7941 43.0067 51.9463C42.3682 53.1552 42.3682 53.1552 41.7476 54.3734C48.28 52.3082 53.909 49.8003 58.9806 45.0924C59.1674 44.9217 59.3542 44.7511 59.5466 44.5752C62.9142 41.3536 65.2955 37.1256 66.5049 32.6362C66.594 32.3122 66.594 32.3122 66.685 31.9817C67.823 26.9461 66.7774 21.8295 64.0777 17.4934C60.6685 12.5451 55.112 9.23038 49.2484 8.15808C41.91 7.07715 34.442 8.3979 28.3981 12.8528C22.2238 17.5712 18.2003 23.9851 16.6044 31.6106C16.1135 35.4633 16.2786 39.4611 18.6893 42.65C20.2926 44.4072 22.4257 45.1762 24.6359 45.8861C24.8355 45.9516 25.0352 46.0171 25.2408 46.0846C25.7265 46.2437 26.2127 46.4009 26.699 46.5578C26.3566 47.337 26.0122 48.1152 25.6675 48.8933C25.5714 49.112 25.4754 49.3306 25.3764 49.5559C24.8247 50.7981 24.2378 51.9844 23.5437 53.1522C20.2043 53.0322 17.1773 51.4921 14.5631 49.4886C14.387 49.3589 14.2108 49.2292 14.0293 49.0956C11.7036 47.2381 10.1495 44.4691 9.2233 41.673C9.14602 41.4447 9.06874 41.2165 8.98912 40.9813C6.91924 33.6578 9.35785 25.1543 12.9115 18.706C14.5904 15.764 16.6192 13.1208 18.932 10.6547C19.0954 10.4746 19.2587 10.2945 19.427 10.109C22.9249 6.39138 27.5255 3.80915 32.2816 2.10631C32.4341 2.05094 32.5866 1.99557 32.7438 1.93852C42.8882 -1.69127 56.2552 -0.310057 64.6887 6.81375Z"/></svg>
+      </span>
+      <span class="dot"></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav.about">Sobre</a>
+      <a href="#services" data-i18n="nav.services">Serviços</a>
+      <a href="#work" data-i18n="nav.work">Projetos</a>
+      <a href="#process" data-i18n="nav.process">Processo</a>
+      <a href="#experience" data-i18n="nav.experience">Experiência</a>
+      <a href="#contact" data-i18n="nav.contact">Contato</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="lang-toggle" data-active="pt">
+        <span class="pill"></span>
+        <button type="button" class="on" data-lang-btn="pt">PT</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary nav-cta btn-sm">
+        <span data-i18n="nav.cta">Vamos conversar</span>
+        <span class="material-symbols-outlined fs-16">arrow_outward</span>
+      </a>
+      <button class="nav-hamburger" data-menu-open aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-drawer">
+    <div class="scrim"></div>
+    <div class="panel">
+      <div class="drawer-head">
+        <button class="nav-hamburger" style="display:grid" data-menu-close aria-label="Fechar menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="links">
+        <a href="#about" data-i18n="nav.about">Sobre</a>
+        <a href="#services" data-i18n="nav.services">Serviços</a>
+        <a href="#work" data-i18n="nav.work">Projetos</a>
+        <a href="#process" data-i18n="nav.process">Processo</a>
+        <a href="#experience" data-i18n="nav.experience">Experiência</a>
+        <a href="#contact" data-i18n="nav.contact">Contato</a>
+      </div>
+      <a href="#contact" class="btn btn-primary cta">
+        <span data-i18n="nav.cta">Vamos conversar</span>
+        <span class="material-symbols-outlined fs-16">arrow_outward</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section hero" id="top">
+      <div class="hero-stage">
+        <div class="hero-bg" aria-hidden="true">
+          <img class="photo" src="/assets/img/2.png" alt="" loading="eager" fetchpriority="high"/>
+          <div class="scrim"></div>
+        </div>
+        <div class="shell hero-shell">
+          <div class="hero-head">
+            <div class="status">
+              <span class="ping"></span> <span data-i18n="hero.status">Disponível</span>
+            </div>
+            <div class="hero-meta">
+              <div data-i18n="hero.location">São Paulo · BR</div>
+              <div class="v"><span data-i18n="hero.tz">UTC −3</span> · <span data-hero-time>--:--</span></div>
+            </div>
+          </div>
+
+          <div class="hero-content">
+            <h1 class="h-hero-compact">
+              <span data-i18n="hero.role1">Construindo</span> <span class="italic" data-i18n="hero.role2">experiências,</span> <span data-i18n="hero.role3">não apenas interfaces.</span>
+            </h1>
+
+            <div class="hero-foot">
+              <p class="hero-tag">
+                <span data-i18n="hero.tag.0">Engenharia frontend </span><em data-i18n="hero.tag.1">com foco em</em><span data-i18n="hero.tag.2">, performance, acessibilidade, design systems e produtos digitais que entregam valor de verdade.</span>
+              </p>
+              <div class="hero-stats" data-hero-stats></div>
+              <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">
+                  <span data-i18n="hero.cta1">Ver projetos</span>
+                  <span class="material-symbols-outlined fs-18">arrow_downward</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                  <span data-i18n="hero.cta2">Iniciar projeto</span>
+                  <span class="material-symbols-outlined fs-16">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee">
+        <div class="shell">
+          <div class="marquee-track"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">01 /</span> <span data-i18n="about.eyebrow">Sobre</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-portrait" data-reveal>
+            <div class="accent-blob"></div>
+            <img src="/assets/img/paola.png" alt="Paola Assis" loading="lazy"/>
+            <div class="corner">
+              <span>PAOLA ASSIS</span>
+              <span class="role">SP · BR</span>
+            </div>
+          </div>
+          <div class="about-body" data-reveal data-reveal-delay="0.1">
+            <p>
+              <span data-i18n="about.p1.0">Desenvolvedora full-stack com mais de </span><strong data-i18n="about.p1.1">6 anos de experiência</strong><span data-i18n="about.p1.2">, especializada em Angular e em expansão para atuação full-stack com Java.</span>
+            </p>
+            <p class="muted" data-i18n="about.p2">Meu trabalho começa na concepção...</p>
+            <p class="muted" data-i18n="about.p3">Um dos meus diferenciais...</p>
+            <p class="muted" data-i18n="about.p4">Sou reconhecida por elevar...</p>
+            <p class="muted" data-i18n="about.p5">Sou uma early adopter...</p>
+            <p class="muted" data-i18n="about.p6">Dupla cidadã...</p>
+            <div class="about-traits">
+              <div class="trait">
+                <span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M6.3 6.3 9 9M18 15l2.7 2.7M6.3 17.7 9 15M18 9l2.7-2.7"/></svg></span>
+                <div class="ttl" data-i18n="about.traits.0.ttl">Pensamento de produto</div>
+                <div class="dsc" data-i18n="about.traits.0.dsc">Mergulho em regras de negócio...</div>
+              </div>
+              <div class="trait">
+                <span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></svg></span>
+                <div class="ttl" data-i18n="about.traits.1.ttl">Angular</div>
+                <div class="dsc" data-i18n="about.traits.1.dsc">Seis anos modernizando legados...</div>
+              </div>
+              <div class="trait">
+                <span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8.5 12 14l10-5.5L12 3zM2 14.5 12 20l10-5.5"/></svg></span>
+                <div class="ttl" data-i18n="about.traits.2.ttl">Liderança técnica</div>
+                <div class="dsc" data-i18n="about.traits.2.dsc">Ponto focal de decisões...</div>
+              </div>
+              <div class="trait">
+                <span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 1 9-9c0 2-1.5 3-3 3h-2a2 2 0 0 0-2 2c0 1 .5 1.5.5 2.5 0 1-.5 1.5-2.5 1.5z"/><circle cx="7" cy="13" r="1" fill="currentColor"/><circle cx="9" cy="8" r="1" fill="currentColor"/></svg></span>
+                <div class="ttl" data-i18n="about.traits.3.ttl">IA como parceira estratégica</div>
+                <div class="dsc" data-i18n="about.traits.3.dsc">Early adopter de IA generativa...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-alt" id="services">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">02 /</span> <span data-i18n="services.eyebrow">Serviços</span>
+        </div>
+        <div class="section-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h-display lead">
+            <span data-i18n="services.leadA">Oito formas</span><br/><span class="italic" data-i18n="services.leadB"> de ajudar</span><span data-i18n="services.leadC">.</span>
+          </h2>
+          <p class="aside" data-i18n="services.aside">Frontend profundo, atenta a design...</p>
+        </div>
+        <div class="services-grid" data-reveal data-reveal-delay="0.2">
+          <div class="service">
+            <div class="num">01</div>
+            <span class="glyph"><span class="material-symbols-outlined">terminal</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.0.ttl">Soluções Customizadas</div>
+            <div class="dsc" data-i18n="services.items.0.dsc">Aplicações Angular sob medida...</div>
+          </div>
+          <div class="service">
+            <div class="num">02</div>
+            <span class="glyph"><span class="material-symbols-outlined">web</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.1.ttl">Sites Premium</div>
+            <div class="dsc" data-i18n="services.items.1.dsc">Sites institucionais e superfícies de produto...</div>
+          </div>
+          <div class="service">
+            <div class="num">03</div>
+            <span class="glyph"><span class="material-symbols-outlined">widgets</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.2.ttl">Design Systems</div>
+            <div class="dsc" data-i18n="services.items.2.dsc">Bibliotecas de componentes que vão pra produção...</div>
+          </div>
+          <div class="service">
+            <div class="num">04</div>
+            <span class="glyph"><span class="material-symbols-outlined">sync_alt</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.3.ttl">Modernização de Legado</div>
+            <div class="dsc" data-i18n="services.items.3.dsc">Migração de sistemas Angular antigos...</div>
+          </div>
+          <div class="service">
+            <div class="num">05</div>
+            <span class="glyph"><span class="material-symbols-outlined">troubleshoot</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.4.ttl">Diagnóstico de UX</div>
+            <div class="dsc" data-i18n="services.items.4.dsc">Auditoria de fluxo e usabilidade...</div>
+          </div>
+          <div class="service">
+            <div class="num">06</div>
+            <span class="glyph"><span class="material-symbols-outlined">sports_esports</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.5.ttl">UI/UX para Jogos &amp; Roblox</div>
+            <div class="dsc" data-i18n="services.items.5.dsc">Interfaces de jogo...</div>
+          </div>
+          <div class="service">
+            <div class="num">07</div>
+            <span class="glyph"><span class="material-symbols-outlined">draw</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.6.ttl">Prototipagem &amp; Estratégia de Produto</div>
+            <div class="dsc" data-i18n="services.items.6.dsc">Do Design Thinking ao protótipo navegável...</div>
+          </div>
+          <div class="service partner">
+            <div class="num">08</div>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <span class="glyph glyph-lg"><span class="material-symbols-outlined fs-32">palette</span></span>
+            <div class="body-col">
+              <div class="ttl" data-i18n="services.items.7.ttl">Brand &amp; Social Media</div>
+              <div class="dsc" data-i18n="services.items.7.dsc">Identidade visual, conteúdo e gestão de mídia social...</div>
+              <a class="byline" href="https://nataliasassis.myportfolio.com/work" target="_blank" rel="noreferrer">
+                <span data-i18n="services.items.7.byline">em parceria com Natália Assis</span>
+                <span class="material-symbols-outlined fs-12">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / PROJECTS -->
+    <section class="section" id="work">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">03 /</span> <span data-i18n="work.eyebrow">Trabalhos selecionados</span>
+        </div>
+        <div class="section-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h-display lead">
+            <span data-i18n="work.leadA">Coisas que </span><span class="italic" data-i18n="work.leadB">construí</span><span data-i18n="work.leadC">.</span>
+          </h2>
+          <p class="aside" data-i18n="work.aside">Nove projetos recentes...</p>
+        </div>
+
+        <div class="project-showcase" data-reveal data-reveal-delay="0.2">
+          <div class="showcase-stage" data-showcase-stage></div>
+          <div class="showcase-thumbs" data-showcase-thumbs role="tablist"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section section-alt" id="process">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">04 /</span> <span data-i18n="process.eyebrow">Processo</span>
+        </div>
+        <div class="section-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h-display lead">
+            <span data-i18n="process.leadA">Fluxo de desenvolvimento</span><br/><span class="italic" data-i18n="process.leadB"> criativo</span><span data-i18n="process.leadC">.</span>
+          </h2>
+          <p class="aside" data-i18n="process.aside">Do primeiro café até o deploy...</p>
+        </div>
+
+        <div class="process-wrap">
+          <div class="process-aside" data-reveal>
+            <div class="aside-card">
+              <div class="step-count"><span data-i18n="process.steps.length">8</span> <span data-i18n="process.stepsLbl">passos</span></div>
+              <div class="aside-title"><span data-i18n="process.leadA">Fluxo de desenvolvimento</span><span data-i18n="process.leadB"> criativo</span>.</div>
+              <div class="aside-sub" data-i18n="process.aside">Do primeiro café até o deploy...</div>
+              <div class="pill-row">
+                <span class="phase-pill">Discovery</span>
+                <span class="phase-pill">Design</span>
+                <span class="phase-pill">Build</span>
+                <span class="phase-pill">Ship</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-steps">
+            <article class="process-step" data-reveal data-reveal-delay="0">
+              <div class="marker">01</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.0.ttl">Conversa inicial</div>
+                  <span class="dur" data-i18n="process.steps.0.dur">30–45 min</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.0.dsc">Entendo o problema, o público...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.05">
+              <div class="marker">02</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.1.ttl">Discovery &amp; briefing</div>
+                  <span class="dur" data-i18n="process.steps.1.dur">3–5 dias</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.1.dsc">Pesquisa de referências...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.1">
+              <div class="marker">03</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.2.ttl">Wireframes</div>
+                  <span class="dur" data-i18n="process.steps.2.dur">1 semana</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.2.dsc">Low-fidelity das telas-chave...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.15">
+              <div class="marker">04</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.3.ttl">Design system</div>
+                  <span class="dur" data-i18n="process.steps.3.dur">1–2 semanas</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.3.dsc">Tokens, tipografia, paleta...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.2">
+              <div class="marker">05</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.4.ttl">UI hi-fi &amp; protótipo</div>
+                  <span class="dur" data-i18n="process.steps.4.dur">2–3 semanas</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.4.dsc">Telas em alta fidelidade...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.25">
+              <div class="marker">06</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.5.ttl">Desenvolvimento</div>
+                  <span class="dur" data-i18n="process.steps.5.dur">3–8 semanas</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.5.dsc">Angular + TypeScript...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.3">
+              <div class="marker">07</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.6.ttl">QA &amp; polimento</div>
+                  <span class="dur" data-i18n="process.steps.6.dur">1 semana</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.6.dsc">Testes cross-browser...</p>
+              </div>
+            </article>
+            <article class="process-step" data-reveal data-reveal-delay="0.35">
+              <div class="marker">08</div>
+              <div class="body">
+                <div class="row">
+                  <div class="ttl" data-i18n="process.steps.7.ttl">Entrega &amp; suporte</div>
+                  <span class="dur" data-i18n="process.steps.7.dur">30–90 dias</span>
+                </div>
+                <p class="dsc" data-i18n="process.steps.7.dsc">Deploy, documentação, treinamento...</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">05 /</span> <span data-i18n="exp.eyebrow">Experiência</span>
+        </div>
+        <div class="section-head" data-reveal data-reveal-delay="0.1">
+          <h2 class="h-display lead">
+            <span data-i18n="exp.leadA">Seis anos,</span><br/><span class="italic" data-i18n="exp.leadB"> quatro capítulos</span><span data-i18n="exp.leadC">.</span>
+          </h2>
+          <p class="aside" data-i18n="exp.aside">De email marketing para o Banco Votorantim...</p>
+        </div>
+
+        <div class="exp-grid">
+          <div class="exp-side">
+            <div class="now-card" data-exp-now data-reveal data-reveal-delay="0.1"></div>
+          </div>
+          <div class="exp-list" data-exp-list></div>
+        </div>
+
+        <div class="certs-wrap" data-reveal>
+          <div class="certs-head">
+            <h3 class="h-h2" data-i18n="exp.certsTitle">Certificações &amp; formação</h3>
+            <p class="muted certs-sub" data-i18n="exp.certsSub">Selo de qualidade vem de prática...</p>
+          </div>
+          <div class="certs-grid" data-exp-certs></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="shell">
+        <div class="section-eyebrow" data-reveal>
+          <span class="dot"></span><span class="num">06 /</span> <span data-i18n="contact.eyebrow">Contato</span>
+        </div>
+        <div class="contact-wrap">
+          <div class="contact-lead" data-reveal>
+            <h2 class="big">
+              <span data-i18n="contact.bigA">Vamos construir</span><br/><span data-i18n="contact.bigB">algo </span><em data-i18n="contact.bigC">de verdade</em><span data-i18n="contact.bigD">.</span>
+            </h2>
+            <p class="sub" data-i18n="contact.sub">Me conte sobre o projeto ou sua ideia...</p>
+            <div class="contact-channels">
+              <a class="channel" href="mailto:paolasantos.assis@gmail.com">
+                <div class="chan-left">
+                  <span class="material-symbols-outlined chan-icn fs-20">mail</span>
+                  <div class="lbl"><span class="k" data-i18n="contact.channels.emailK">Email</span><span class="v">paolasantos.assis&#64;gmail.com</span></div>
+                </div>
+                <span class="arr material-symbols-outlined fs-18">arrow_outward</span>
+              </a>
+              <a class="channel" href="https://wa.me/5511930499095" target="_blank" rel="noreferrer">
+                <div class="chan-left">
+                  <span class="material-symbols-outlined chan-icn fs-20">call</span>
+                  <div class="lbl"><span class="k" data-i18n="contact.channels.whatsK">WhatsApp</span><span class="v">+55 (11) 93049-9095</span></div>
+                </div>
+                <span class="arr material-symbols-outlined fs-18">arrow_outward</span>
+              </a>
+              <a class="channel" href="https://www.linkedin.com/in/assispaola/" target="_blank" rel="noreferrer">
+                <div class="chan-left">
+                  <span class="material-symbols-outlined chan-icn fs-20">link</span>
+                  <div class="lbl"><span class="k" data-i18n="contact.channels.linkedinK">LinkedIn</span><span class="v">/in/assispaola</span></div>
+                </div>
+                <span class="arr material-symbols-outlined fs-18">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" data-contact-form data-reveal data-reveal-delay="0.1">
+            <div class="field-row">
+              <div class="field">
+                <label for="name" data-i18n="contact.form.name">Nome</label>
+                <input id="name" name="name" type="text" required data-i18n-placeholder="contact.form.namePh" placeholder="Seu nome"/>
+              </div>
+              <div class="field">
+                <label for="email" data-i18n="contact.form.email">Email</label>
+                <input id="email" name="email" type="email" required data-i18n-placeholder="contact.form.emailPh" placeholder="voce@empresa.com"/>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="phone" data-i18n="contact.form.phone">Telefone</label>
+                <input id="phone" name="phone" type="tel" required data-i18n-placeholder="contact.form.phonePh" placeholder="(11) 90000-0000"/>
+              </div>
+              <div class="field">
+                <label for="ptype" data-i18n="contact.form.type">Tipo de projeto</label>
+                <select id="ptype" name="type" required>
+                  <option data-i18n="contact.form.types.0">Aplicação customizada</option>
+                  <option data-i18n="contact.form.types.1">Design system</option>
+                  <option data-i18n="contact.form.types.2">Aplicativo</option>
+                  <option data-i18n="contact.form.types.3">Website</option>
+                  <option data-i18n="contact.form.types.4">Consultoria / auditoria</option>
+                  <option data-i18n="contact.form.types.5">Outra coisa</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="msg" data-i18n="contact.form.msg">Me conte mais</label>
+              <textarea id="msg" name="msg" data-i18n-placeholder="contact.form.msgPh" placeholder="Stack, prazo, faixa de orçamento, qualquer coisa relevante…"></textarea>
+            </div>
+            <input type="text" name="_honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot"/>
+            <button type="submit" class="btn btn-primary align-self-start" data-submit-btn>
+              <span data-submit-label data-i18n="contact.form.submit">Enviar via WhatsApp</span>
+              <span class="material-symbols-outlined fs-14">arrow_outward</span>
+            </button>
+            <p class="muted field-error" data-form-error data-i18n="contact.form.error" hidden>Não consegui abrir o WhatsApp...</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer-top">
+        <div class="brand-block">
+          <a href="#top" class="brand">
+            <span class="brand-mark">
+              <svg width="100" height="102" viewBox="0 0 100 102" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M64.6887 6.81375C65.5637 7.57824 66.3988 8.38017 67.233 9.18924C67.5216 9.45229 67.5216 9.45229 67.8161 9.72065C71.6443 13.3156 74.6897 19.3096 74.9858 24.6183C74.9928 24.9602 74.9928 24.9602 75 25.309C75.0059 25.4707 75.0118 25.6323 75.0179 25.7989C75.1035 28.2749 74.9762 30.5756 74.4548 32.9987C74.3643 33.4237 74.3643 33.4237 74.2718 33.8574C74.2047 34.0943 74.1375 34.3312 74.0682 34.5752C73.8769 36.009 74.6229 37.3271 75.1621 38.6172C75.2873 38.9248 75.412 39.2326 75.5364 39.5406C75.8682 40.3593 76.2048 41.176 76.5424 41.9922C76.8646 42.7729 77.1831 43.555 77.5016 44.3372C77.6304 44.6535 77.7593 44.9697 77.8881 45.286C77.9533 45.446 78.0185 45.606 78.0857 45.7709C78.2918 46.2763 78.4985 46.7815 78.7052 47.2867C79.959 50.3536 81.1847 53.4316 82.4067 56.5115C82.5088 56.7688 82.6109 57.0261 82.7161 57.2912C82.8191 57.5509 82.9222 57.8106 83.0284 58.0783C83.2393 58.6099 83.4503 59.1415 83.6612 59.6732C83.8199 60.073 83.8199 60.073 83.9817 60.4808C85.1652 63.4621 86.3556 66.4406 87.5465 69.4189C87.7655 69.9669 87.9845 70.5148 88.2035 71.0627C89.0848 73.2673 89.9662 75.4719 90.848 77.6763C93.1448 83.4183 95.4382 89.1617 97.7086 94.9143C97.9145 95.4358 98.1207 95.9571 98.3271 96.4783C98.6103 97.1935 98.8924 97.9091 99.1741 98.6249C99.2585 98.8374 99.3428 99.0499 99.4297 99.2688C99.5054 99.4619 99.5812 99.6551 99.6592 99.854C99.7255 100.022 99.7917 100.19 99.8599 100.363C100 100.779 100 100.779 100 101.267C97.2767 101.267 94.5534 101.267 91.7476 101.267C91.3946 100.353 91.3946 100.353 91.0346 99.4202C89.3783 95.1339 87.7134 90.8514 86.0134 86.5824C85.9372 86.3912 85.8611 86.2 85.7827 86.0031C84.8926 83.7674 84.0001 81.5326 83.1072 79.2981C82.6112 78.0568 82.1159 76.8152 81.6209 75.5735C81.3147 74.8054 81.0081 74.0374 80.7007 73.2697C80.3572 72.4113 80.0146 71.5525 79.6723 70.6935C79.5679 70.4333 79.4634 70.173 79.3558 69.9048C79.2612 69.667 79.1667 69.4293 79.0693 69.1843C78.9862 68.9763 78.903 68.7682 78.8174 68.5538C78.6408 68.0508 78.6408 68.0508 78.6408 67.5623C76.8373 67.5789 75.0339 67.601 73.2306 67.6264C72.6196 67.6344 72.0086 67.6413 71.3976 67.6469C64.4479 67.7125 57.7503 68.3042 51.4563 71.4701C51.2946 71.5507 51.1329 71.6313 50.9663 71.7143C44.387 75.0507 40.4683 80.5454 37.3786 87.1014C36.3046 86.9841 35.6932 86.7946 34.8908 86.0634C34.6486 85.85 34.6486 85.85 34.4015 85.6322C33.3701 84.4447 33.3626 83.129 33.388 81.6146C33.575 80.1073 34.2275 78.8916 34.9515 77.5761C35.0857 77.3236 35.2199 77.0711 35.3582 76.811C36.2848 75.1348 37.3574 73.6602 38.5922 72.2029C38.7358 72.0228 38.8795 71.8427 39.0274 71.6571C44.8208 64.6466 54.8088 61.1788 63.5544 60.3476C67.514 60.059 71.5183 60.1972 75.4854 60.2352C74.5892 57.8176 73.6819 55.4047 72.7549 52.9989C72.5725 52.5256 72.3906 52.0521 72.2087 51.5785C72.0874 51.2632 71.9661 50.9479 71.8447 50.6326C71.7561 50.4026 71.7561 50.4026 71.6658 50.168C71.3499 49.3502 71.0289 48.5349 70.7012 47.7219C70.5999 47.4698 70.5999 47.4698 70.4964 47.2127C70.3664 46.8902 70.2355 46.5679 70.1039 46.2461C69.6602 45.1461 69.6602 45.1461 69.6602 44.6039C69.5 44.6039 69.3398 44.6039 69.1748 44.6039C69.1147 44.7393 69.0546 44.8746 68.9927 45.0141C66.4921 49.6851 61.3951 53.0711 57.0388 55.8389C56.7813 56.0042 56.5238 56.1694 56.2585 56.3397C52.8003 58.4445 48.9587 59.9908 45.0698 61.0747C44.7428 61.1661 44.7428 61.1661 44.4092 61.2593C43.333 61.5402 42.3138 61.7322 41.2024 61.7884C39.1814 61.8459 39.1814 61.8459 37.4857 62.8108C36.7228 63.8969 36.2439 65.1179 35.7468 66.3436C35.1721 67.6978 34.4776 68.9913 33.7985 70.2947C33.6547 70.5747 33.5108 70.8546 33.3626 71.143C31.8884 73.9991 30.2886 76.7725 28.6408 79.53C28.5085 79.7535 28.3762 79.977 28.2398 80.2073C23.3215 88.4985 16.5364 98.556 6.70836 101.248C4.43936 101.816 2.35049 102 0 102C0 99.985 0 97.9701 0 95.894C0.931129 95.6976 0.931129 95.6976 1.88107 95.4971C10.1281 93.6091 15.9021 85.7392 20.1911 78.9194C23.9467 72.855 27.254 66.5327 30.405 60.1332C30.8262 59.278 31.2487 58.4236 31.6717 57.5693C32.7202 55.451 33.7668 53.3317 34.8125 51.2119C35.6303 49.5541 36.4487 47.8967 37.2693 46.2403C37.6195 45.5331 37.969 44.8256 38.3174 44.1175C47.8071 24.8289 47.8071 24.8289 54.0798 22.3533C56.0583 21.7928 58.1624 21.8809 59.9894 22.8447C60.1371 22.9325 60.2847 23.0204 60.4369 23.1109C60.6822 23.2519 60.9275 23.393 61.1802 23.5383C61.3354 23.639 61.4906 23.7398 61.6505 23.8436C61.3159 24.6236 60.9512 25.0632 60.3004 25.599C58.0162 27.5585 56.1604 29.7392 54.3689 32.1477C54.2554 32.2987 54.1419 32.4496 54.0249 32.6052C50.3539 37.5204 47.5761 43.0213 44.8062 48.4819C44.2151 49.6413 43.6117 50.7941 43.0067 51.9463C42.3682 53.1552 42.3682 53.1552 41.7476 54.3734C48.28 52.3082 53.909 49.8003 58.9806 45.0924C59.1674 44.9217 59.3542 44.7511 59.5466 44.5752C62.9142 41.3536 65.2955 37.1256 66.5049 32.6362C66.594 32.3122 66.594 32.3122 66.685 31.9817C67.823 26.9461 66.7774 21.8295 64.0777 17.4934C60.6685 12.5451 55.112 9.23038 49.2484 8.15808C41.91 7.07715 34.442 8.3979 28.3981 12.8528C22.2238 17.5712 18.2003 23.9851 16.6044 31.6106C16.1135 35.4633 16.2786 39.4611 18.6893 42.65C20.2926 44.4072 22.4257 45.1762 24.6359 45.8861C24.8355 45.9516 25.0352 46.0171 25.2408 46.0846C25.7265 46.2437 26.2127 46.4009 26.699 46.5578C26.3566 47.337 26.0122 48.1152 25.6675 48.8933C25.5714 49.112 25.4754 49.3306 25.3764 49.5559C24.8247 50.7981 24.2378 51.9844 23.5437 53.1522C20.2043 53.0322 17.1773 51.4921 14.5631 49.4886C14.387 49.3589 14.2108 49.2292 14.0293 49.0956C11.7036 47.2381 10.1495 44.4691 9.2233 41.673C9.14602 41.4447 9.06874 41.2165 8.98912 40.9813C6.91924 33.6578 9.35785 25.1543 12.9115 18.706C14.5904 15.764 16.6192 13.1208 18.932 10.6547C19.0954 10.4746 19.2587 10.2945 19.427 10.109C22.9249 6.39138 27.5255 3.80915 32.2816 2.10631C32.4341 2.05094 32.5866 1.99557 32.7438 1.93852C42.8882 -1.69127 56.2552 -0.310057 64.6887 6.81375Z"/></svg>
+            </span>
+            <span class="dot"></span>
+          </a>
+          <p data-i18n="footer.blurb">Engenheira frontend especializada em Angular...</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.navigateH">Navegue</h4>
+          <ul>
+            <li><a href="#about" data-i18n="footer.links.about">Sobre</a></li>
+            <li><a href="#services" data-i18n="footer.links.services">Serviços</a></li>
+            <li><a href="#work" data-i18n="footer.links.work">Projetos</a></li>
+            <li><a href="#process" data-i18n="footer.links.process">Processo</a></li>
+            <li><a href="#experience" data-i18n="footer.links.experience">Experiência</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.elsewhereH">Em outros lugares</h4>
+          <ul>
+            <li><a href="https://github.com/assispaola" target="_blank" rel="noreferrer">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/assispaola/" target="_blank" rel="noreferrer">LinkedIn ↗</a></li>
+            <li><a href="https://www.upwork.com/freelancers/~0145151d59c5d3a95a?mp_source=share" target="_blank" rel="noreferrer">Upwork ↗</a></li>
+            <li><a href="https://wa.me/5511930499095" target="_blank" rel="noreferrer">WhatsApp ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.reachH">Contato</h4>
+          <ul>
+            <li><a href="mailto:paolasantos.assis@gmail.com">paolasantos.assis&#64;gmail.com</a></li>
+            <li><a href="tel:+5511930499095">+55 (11) 93049-9095</a></li>
+            <li>São Paulo, BR · UTC −3</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <div data-i18n="footer.copyright">© 2026 Paola Assis</div>
+        <div class="pulse" data-i18n="footer.avail">Disponível</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

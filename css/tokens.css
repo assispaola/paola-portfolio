@@ -1,0 +1,58 @@
+:root {
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --t-hero: clamp(56px, 11vw, 168px);
+  --t-display: clamp(40px, 6vw, 96px);
+  --t-h1: clamp(32px, 4.4vw, 64px);
+  --t-h2: clamp(24px, 2.6vw, 36px);
+  --t-h3: 20px;
+  --t-body: 16px;
+  --t-small: 13px;
+  --t-meta: 11px;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+  --sp-10: 128px;
+
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-1: 180ms;
+  --dur-2: 320ms;
+  --dur-3: 560ms;
+
+  --gutter: clamp(20px, 4vw, 64px);
+  --max-w: 1440px;
+
+  --accent: #fe96e1;
+  --accent-2: #fdcefc;
+  --accent-ink: #1a0a17;
+  --accent-soft: rgba(254, 150, 225, 0.14);
+  --accent-gradient: linear-gradient(135deg, #fdcefc 0%, #fe96e1 100%);
+  --accent-fill: #fe96e1;
+
+  /* Light-mode-only palette */
+  --bg: #f3f3f3;
+  --bg-2: #e8e8e8;
+  --bg-3: #dedede;
+  --border: #d2d2d2;
+  --border-2: #b8b8b8;
+  --fg: #141414;
+  --fg-2: #3a3a3a;
+  --fg-3: #5c5c5c;
+  --fg-4: #8a8a8a;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 30px 60px -28px rgba(20, 20, 20, 0.16);
+  --grain-op: 0.02;
+}

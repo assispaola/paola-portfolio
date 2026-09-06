@@ -1,0 +1,134 @@
+@media (max-width: 1080px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: grid;
+  }
+  .lang-toggle button {
+    min-height: 44px;
+    padding: 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mega-name {
+    font-size: clamp(48px, 15vw, 180px);
+    margin-top: 40px;
+  }
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .process-wrap {
+    grid-template-columns: 1fr;
+  }
+  .process-aside {
+    position: static;
+  }
+  .showcase-stage {
+    grid-template-columns: 1fr;
+  }
+  .showcase-frame {
+    min-height: auto;
+  }
+  .showcase-thumbs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cert.education {
+    grid-column: span 2;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .hero-bg .photo {
+    object-position: 68% 20%;
+  }
+  .hero-bg .scrim {
+    background: linear-gradient(180deg, rgba(8, 8, 12, 0.35) 0%, rgba(8, 8, 12, 0.5) 45%, rgba(8, 8, 12, 0.85) 100%),
+      linear-gradient(90deg, rgba(8, 8, 12, 0.5) 0%, rgba(8, 8, 12, 0.2) 100%);
+  }
+  .hero-shell {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section-head .lead,
+  .section-head .aside {
+    max-width: 100%;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service.partner {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-bot {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-head {
+    align-items: flex-start;
+  }
+  .hero-meta {
+    text-align: left;
+  }
+  .showcase-thumbs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+  .cert,
+  .cert.education {
+    grid-column: span 1;
+    grid-template-columns: 60px 1fr;
+  }
+  .nav-actions .nav-cta {
+    display: none;
+  }
+  .mega-name {
+    font-size: clamp(28px, 13vw, 60px);
+    margin-top: 24px;
+  }
+  .footer .brand-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
