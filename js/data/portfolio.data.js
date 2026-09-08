@@ -4,8 +4,8 @@ export const TRANSLATIONS = {
     hero: {
       status: 'Disponível', location: 'São Paulo · BR', tz: 'UTC −3',
       role1: 'Construindo', role2: 'experiências,', role3: 'não apenas interfaces.',
-      tag: ['Engenharia frontend ', 'com foco em', ', performance, acessibilidade, design systems e produtos digitais que entregam valor de verdade.'],
-      stats: [{ n: '6+', l: 'Anos em frontend' }, { n: '5', l: 'Certificações' }, { n: '1', l: 'Prêmio de alta performance' }],
+      tag: ['Engenharia frontend ', 'com foco em', ' performance, acessibilidade, design systems e produtos digitais que entregam valor de verdade.'],
+      stats: [{ n: '6+', l: 'Anos em frontend' }, { n: '5', l: 'Certificações' }, { n: '1', l: 'Prêmio performance' }],
       cta1: 'Ver projetos', cta2: 'Iniciar projeto',
     },
     about: {
@@ -24,17 +24,78 @@ export const TRANSLATIONS = {
       ],
     },
     services: {
-      eyebrow: 'Serviços', leadA: 'Oito formas', leadB: ' de ajudar', leadC: '.',
-      aside: 'Frontend profundo, atenta a design, curiosa sobre full-stack. Escolhe a forma — o rigor é o mesmo.',
+      eyebrow: 'Serviços', leadA: 'Doze formas', leadB: ' de ajudar', leadC: '.',
+      aside: 'De grandes sistemas a pequenos negócios — a mesma atenção em cada entrega.',
+      toggleCta: 'Ver serviços',
+      tabs: { projects: 'Projetos & Sistemas', design: 'Design & Produto', web: 'Web & Marketing', business: 'Seu Negócio' },
       items: [
-        { ttl: 'Soluções Customizadas', dsc: 'Aplicações Angular sob medida, moldadas pelo problema real — sem atalho de template.' },
-        { ttl: 'Sites Premium', dsc: 'Sites institucionais e superfícies de produto tão considerados quanto o produto por trás.' },
-        { ttl: 'Design Systems', dsc: 'Bibliotecas de componentes que vão pra produção: tokens, docs, governança, contribuição.' },
-        { ttl: 'Modernização de Legado', dsc: 'Migração de sistemas Angular antigos (AngularJS, versões desatualizadas) pra arquitetura moderna — sem parar o negócio pra fazer isso. Escalabilidade e performance sem reescrever do zero.' },
-        { ttl: 'Diagnóstico de UX', dsc: 'Auditoria de fluxo e usabilidade com entrega objetiva: pontos de fricção mapeados, protótipo no Figma com as correções prioritárias. Pensado pra times que têm produto rodando mas não têm design dedicado.' },
-        { ttl: 'UI/UX para Jogos & Roblox', dsc: 'Interfaces de jogo — HUD, telas de loja, popups de recompensa, menus — desenhadas com lógica de produto, não só estética. Pra criadores que dominam a lógica do jogo mas precisam de uma interface que retenha e converta.' },
-        { ttl: 'Prototipagem & Estratégia de Produto', dsc: 'Do Design Thinking ao protótipo navegável: mapeamento de jornada, wireframes, fluxos e validação antes da primeira linha de código. Pra quem precisa testar uma ideia antes de construir.' },
-        { ttl: 'Brand & Social Media', dsc: 'Identidade visual, conteúdo e gestão de mídia social — em parceria com Natália Assis, designer especializada.', byline: 'em parceria com Natália Assis' },
+        { ttl: 'Sistemas Angular Complexos', dsc: 'SaaS, CRM, dashboards e apps sob medida — construídos do zero ou modernizados a partir de sistemas legados, com arquitetura pensada pra escalar.', category: 'projects', subitems: [
+          { ttl: 'Dashboards administrativos', dsc: 'Painéis de controle com dados em tempo real e permissões por perfil' },
+          { ttl: 'CRMs e sistemas internos', dsc: 'Ferramentas sob medida pra times e processos específicos' },
+          { ttl: 'Integração com APIs', dsc: 'Consumo e orquestração de serviços externos' },
+          { ttl: 'Arquitetura escalável', dsc: 'Estrutura pensada pra crescer sem reescrever do zero' },
+        ] },
+        { ttl: 'Front-end para Apps Móveis', dsc: 'Do design das telas no Figma até a implementação funcional com Angular/Ionic, ponta a ponta.', category: 'projects', subitems: [
+          { ttl: 'Telas em Figma', dsc: 'Design de interface pronto pra desenvolvimento' },
+          { ttl: 'Apps híbridos com Ionic', dsc: 'Um código, iOS e Android' },
+          { ttl: 'Navegação e fluxo de usuário', dsc: 'Experiência pensada de ponta a ponta' },
+          { ttl: 'Integração com back-end', dsc: 'Conectando o app aos dados reais' },
+        ] },
+        { ttl: 'UX/UI Design', dsc: 'Do wireframe ao protótipo de alta fidelidade, passando por design systems: tokens, documentação e componentes prontos pra produção.', category: 'design', subitems: [
+          { ttl: 'Wireframes', dsc: 'Estrutura de baixa fidelidade validada antes do visual' },
+          { ttl: 'Protótipos navegáveis', dsc: 'Telas interativas pra testar antes de construir' },
+          { ttl: 'Design systems', dsc: 'Tokens, componentes e documentação' },
+          { ttl: 'Handoff pra desenvolvimento', dsc: 'Especificações prontas pro time técnico' },
+        ] },
+        { ttl: 'Modernização de Legado', dsc: 'Migração de AngularJS e versões antigas pra arquitetura moderna — sem parar o negócio pra fazer isso.', category: 'projects', subitems: [
+          { ttl: 'Migração de AngularJS', dsc: 'Atualização pra Angular moderno sem parar produção' },
+          { ttl: 'Refatoração de código', dsc: 'Estrutura mais limpa e sustentável' },
+          { ttl: 'Atualização de dependências', dsc: 'Segurança e performance em dia' },
+          { ttl: 'Plano de migração gradual', dsc: 'Sem big bang, sem quebrar o que funciona' },
+        ] },
+        { ttl: 'Sites, Landing Pages & E-commerce', dsc: 'Front-end na tecnologia certa pro objetivo do projeto: HTML/CSS/JS, React, Shopify, Webflow, Framer ou WordPress.', category: 'web', subitems: [
+          { ttl: 'Landing pages de conversão', dsc: 'Página focada em um objetivo claro' },
+          { ttl: 'Lojas Shopify', dsc: 'E-commerce completo, pronto pra vender' },
+          { ttl: 'Sites institucionais', dsc: 'Presença profissional pra qualquer negócio' },
+          { ttl: 'Webflow, Framer ou WordPress', dsc: 'A ferramenta certa pro seu caso' },
+        ] },
+        { ttl: 'Email Marketing & Ciclo de Vida', dsc: 'Campanhas completas do conceito no Figma ao HTML pronto pra produção, compatível com os principais clientes de email.', category: 'web', subitems: [
+          { ttl: 'Emails responsivos', dsc: 'Compatíveis com Gmail, Outlook e Apple Mail' },
+          { ttl: 'Conteúdo dinâmico e segmentado', dsc: 'Mensagem certa pra cada público' },
+          { ttl: 'Templates reutilizáveis', dsc: 'Consistência em cada campanha' },
+          { ttl: 'Testes cross-client', dsc: 'Garantia de que tudo funciona onde for aberto' },
+        ] },
+        { ttl: 'Materiais de Marketing', dsc: 'Peças que comunicam com a mesma qualidade do produto: apresentações, propostas e conteúdo pra redes sociais.', category: 'web', subitems: [
+          { ttl: 'Media kit', dsc: 'Material de apresentação da marca pra parcerias e imprensa' },
+          { ttl: 'Proposta comercial', dsc: 'Documento que vende visualmente, não só em texto' },
+          { ttl: 'Apresentações', dsc: 'Slides organizados pra pitch, relatório ou reunião' },
+          { ttl: 'Posts pra redes sociais', dsc: 'Peças com identidade visual consistente' },
+        ] },
+        { ttl: 'Redesign', dsc: 'Repense tudo no Figma antes do código, ou evolua direto na implementação sem comprometer o que já funciona.', category: 'design', subitems: [
+          { ttl: 'Redesign completo no Figma', dsc: 'Repensar tudo antes do código' },
+          { ttl: 'Evolução incremental', dsc: 'Melhorias direto na implementação' },
+          { ttl: 'Auditoria de UX', dsc: 'Pontos de fricção mapeados e priorizados' },
+          { ttl: 'Modernização visual', dsc: 'Nova cara sem perder o que já funciona' },
+        ] },
+        { ttl: 'Brand & Social Media', dsc: 'Identidade visual, conteúdo e gestão de mídia social — em parceria com Natália Assis, designer especializada.', byline: 'em parceria com Natália Assis', category: 'design' },
+        { ttl: 'Presença Digital', dsc: '"Sua marca merece parecer o que ela já é."', category: 'business', subitems: [
+          { ttl: 'Posts pro Instagram', dsc: 'Stories, carrossel e feed com identidade visual própria' },
+          { ttl: 'Site e página de vendas', dsc: 'Um lugar profissional pra chamar de seu' },
+          { ttl: 'Fotos profissionais com IA', dsc: 'Ensaio realista pra usar nas redes, site, onde quiser' },
+          { ttl: 'Email marketing', dsc: 'Campanhas bonitas que realmente chegam até o cliente' },
+        ] },
+        { ttl: 'Automação & Sistemas', dsc: 'Automatizo o que trava o dia a dia do seu negócio.', category: 'business', subitems: [
+          { ttl: 'Atendimento automático no WhatsApp', dsc: 'Aquele "robozinho" que responde e organiza os clientes por você' },
+          { ttl: 'Sistema de agendamento', dsc: 'Cliente marca sozinho, sem trocar 20 mensagens' },
+          { ttl: 'Sistema sob medida', dsc: 'Estoque, caixa, financeiro ou clientes, do seu jeito' },
+          { ttl: 'Automações gerais', dsc: 'Conecto as ferramentas que você já usa, sem trabalho manual repetido' },
+        ] },
+        { ttl: 'Educação & Aprendizagem', dsc: 'E-books, apostilas e sistemas de aprendizagem personalizados.', category: 'business', subitems: [
+          { ttl: 'E-books e apostilas digitais', dsc: 'Conteúdo bonito, fácil de ler e de vender' },
+          { ttl: 'Aprendizagem personalizada', dsc: 'Sistemas pensados pro perfil de cada aluno' },
+          { ttl: 'Gamificação com personagens', dsc: 'Progressão que engaja de verdade' },
+          { ttl: 'Portal aluno e professor', dsc: 'Gestão de turmas, alunos e conteúdo, num só lugar' },
+        ] },
       ],
     },
     process: {
@@ -53,27 +114,9 @@ export const TRANSLATIONS = {
       ],
     },
     work: {
-      eyebrow: 'Trabalhos selecionados', leadA: 'Coisas que ', leadB: 'construí', leadC: '.',
-      aside: 'Nove projetos recentes em aprendizado gamificado, jogos, branding e social media design. Mais sob demanda.',
-      next: 'Próximo',
-      cards: {
-        nexus:         { badge: 'Aplicativo CNH', dsc: 'Plataforma que conecta instrutores e alunos de autoescola — tracking de XP, desafios de rota e ladders de habilidade. Do Figma à entrega Ionic.' },
-        // TODO: Paola completar descrição real (objetivo do produto e stack)
-        cartasMiticas: { badge: 'Jogo Roblox', dsc: 'Card game de temática mitológica construído no Roblox, unindo mecânicas de coleção/batalha com uma interface pensada pra reforçar a fantasia do universo — do design de cartas às telas de deck e progressão.' },
-        kynds:         { badge: 'Branding', dsc: 'Identidade visual e materiais de marca.' },
-        // TODO: Paola completar descrição real do que foi entregue para Kynds (escopo e entregáveis)
-        schneider:     { badge: 'Aprendizado gamificado', dsc: 'Sistema de preparação para a certificação ISTQB CTFL 4.0 — streaks, módulos progressivos e mecânicas de engajamento personalizado temática anime.' },
-        // TODO: Paola completar descrição real (funcionalidade principal e stack)
-        wondr:         { badge: 'Social Media Design', dsc: 'Peças e direção visual para redes sociais.' },
-        // TODO: Paola completar descrição real do que foi entregue para Wondr (escopo e entregáveis)
-        designSystems: { badge: 'Design Systems', dsc: 'Ideação, criação e desenvolvimento de design system completo de marcas e/ou produtos digitais.' },
-        bigshot:       { badge: 'Branding', dsc: 'Identidade visual e materiais de marca.' },
-        // TODO: Paola completar descrição real do que foi entregue para BigShot (escopo e entregáveis)
-        english:       { badge: 'Portal de Estudo', dsc: 'Site web de aprendizado do idioma inglês com progressão adaptativa, agenda, anotações, flashcards entre outros recursos.' },
-        // TODO: Paola completar descrição real (funcionalidade principal e stack)
-        switch:        { badge: 'Social Media Design', dsc: 'Peças e direção visual para redes sociais.' },
-        // TODO: Paola completar descrição real do que foi entregue para Switch (escopo e entregáveis)
-      },
+      eyebrow: 'Trabalhos selecionados', leadA: 'Projetos em ', leadB: 'destaque', leadC: '.',
+      aside: 'Os projetos mais recentes ficam sempre atualizados no meu perfil do Upwork.',
+      cta: 'Ver todos os projetos',
     },
     exp: {
       eyebrow: 'Experiência', leadA: 'Seis anos,', leadB: ' quatro capítulos', leadC: '.',
@@ -132,17 +175,78 @@ export const TRANSLATIONS = {
       ],
     },
     services: {
-      eyebrow: 'Services', leadA: 'Eight ways', leadB: ' I can help', leadC: '.',
-      aside: 'Frontend-deep, design-aware, full-stack-curious. Pick the shape — the rigour stays the same.',
+      eyebrow: 'Services', leadA: 'Twelve ways', leadB: ' I can help', leadC: '.',
+      aside: 'From large systems to small businesses — the same care in every delivery.',
+      toggleCta: 'See services',
+      tabs: { projects: 'Projects & Systems', design: 'Design & Product', web: 'Web & Marketing', business: 'Your Business' },
       items: [
-        { ttl: 'Custom Solutions', dsc: 'Bespoke Angular applications shaped around the actual problem — no template-driven shortcuts.' },
-        { ttl: 'Premium Websites', dsc: 'Marketing sites and product surfaces that look and feel as considered as the product behind them.' },
-        { ttl: 'Design Systems', dsc: 'Component libraries that actually get used: tokens, docs, governance, contribution flow.' },
-        { ttl: 'Legacy Modernization', dsc: 'Migrating old Angular systems (AngularJS, outdated versions) to a modern architecture — without stopping the business to do it. Scalability and performance without a rewrite from scratch.' },
-        { ttl: 'UX Diagnosis', dsc: 'Flow and usability audit with an objective output: friction points mapped, Figma prototype with the priority fixes. Built for teams with a live product but no dedicated design.' },
-        { ttl: 'UI/UX for Games & Roblox', dsc: 'Game interfaces — HUD, shop screens, reward popups, menus — designed with product logic, not just aesthetics. For creators who master the game logic but need an interface that retains and converts.' },
-        { ttl: 'Prototyping & Product Strategy', dsc: 'From Design Thinking to a navigable prototype: journey mapping, wireframes, flows, and validation before the first line of code. For anyone who needs to test an idea before building it.' },
-        { ttl: 'Brand & Social Media', dsc: 'Visual identity, content, and social media management — in partnership with Natália Assis, specialist designer.', byline: 'in partnership with Natália Assis' },
+        { ttl: 'Complex Angular Systems', dsc: 'SaaS, CRM, dashboards, and custom apps — built from scratch or modernized from legacy systems, with architecture designed to scale.', category: 'projects', subitems: [
+          { ttl: 'Admin dashboards', dsc: 'Control panels with real-time data and role-based permissions' },
+          { ttl: 'CRMs & internal tools', dsc: 'Custom-built tools for specific teams and processes' },
+          { ttl: 'API integration', dsc: 'Consuming and orchestrating external services' },
+          { ttl: 'Scalable architecture', dsc: 'Built to grow without a rewrite' },
+        ] },
+        { ttl: 'Mobile App Front-end', dsc: 'From Figma screens to functional implementation with Angular/Ionic, end to end.', category: 'projects', subitems: [
+          { ttl: 'Figma screens', dsc: 'Interface design ready for development' },
+          { ttl: 'Hybrid apps with Ionic', dsc: 'One codebase, iOS and Android' },
+          { ttl: 'Navigation & user flow', dsc: 'End-to-end thought-out experience' },
+          { ttl: 'Back-end integration', dsc: 'Connecting the app to real data' },
+        ] },
+        { ttl: 'UX/UI Design', dsc: 'From wireframe to high-fidelity prototype, through design systems: tokens, documentation, and production-ready components.', category: 'design', subitems: [
+          { ttl: 'Wireframes', dsc: 'Low-fidelity structure validated before visual design' },
+          { ttl: 'Interactive prototypes', dsc: 'Clickable screens to test before building' },
+          { ttl: 'Design systems', dsc: 'Tokens, components and documentation' },
+          { ttl: 'Dev handoff', dsc: 'Specs ready for the engineering team' },
+        ] },
+        { ttl: 'Legacy Modernization', dsc: 'Migrating AngularJS and outdated versions to a modern architecture — without stopping the business to do it.', category: 'projects', subitems: [
+          { ttl: 'AngularJS migration', dsc: 'Upgrading to modern Angular without stopping production' },
+          { ttl: 'Code refactoring', dsc: 'Cleaner, more maintainable structure' },
+          { ttl: 'Dependency updates', dsc: 'Security and performance kept current' },
+          { ttl: 'Gradual migration plan', dsc: "No big bang, nothing breaks along the way" },
+        ] },
+        { ttl: 'Sites, Landing Pages & E-commerce', dsc: "Front-end in the right technology for the project's goal: HTML/CSS/JS, React, Shopify, Webflow, Framer, or WordPress.", category: 'web', subitems: [
+          { ttl: 'Conversion landing pages', dsc: 'A page focused on one clear goal' },
+          { ttl: 'Shopify stores', dsc: 'Full e-commerce, ready to sell' },
+          { ttl: 'Institutional websites', dsc: 'A professional presence for any business' },
+          { ttl: 'Webflow, Framer or WordPress', dsc: 'The right tool for your case' },
+        ] },
+        { ttl: 'Email Marketing & Lifecycle', dsc: 'End-to-end campaigns from Figma concept to production-ready HTML, compatible with the major email clients.', category: 'web', subitems: [
+          { ttl: 'Responsive emails', dsc: 'Compatible with Gmail, Outlook and Apple Mail' },
+          { ttl: 'Dynamic, segmented content', dsc: 'The right message for each audience' },
+          { ttl: 'Reusable templates', dsc: 'Consistency across every campaign' },
+          { ttl: 'Cross-client testing', dsc: "Confidence it works wherever it's opened" },
+        ] },
+        { ttl: 'Marketing Materials', dsc: 'Pieces that communicate with the same quality as the product: presentations, proposals and social content.', category: 'web', subitems: [
+          { ttl: 'Media kit', dsc: 'Brand presentation material for partnerships and press' },
+          { ttl: 'Business proposal', dsc: 'A document that sells visually, not just in text' },
+          { ttl: 'Presentations', dsc: 'Organized slides for pitches, reports or meetings' },
+          { ttl: 'Social media posts', dsc: 'Pieces with a consistent visual identity' },
+        ] },
+        { ttl: 'Redesign', dsc: 'Rethink everything in Figma before code, or evolve directly in implementation without compromising what already works.', category: 'design', subitems: [
+          { ttl: 'Full Figma redesign', dsc: 'Rethink everything before touching code' },
+          { ttl: 'Incremental evolution', dsc: 'Improvements built directly into implementation' },
+          { ttl: 'UX audit', dsc: 'Friction points mapped and prioritized' },
+          { ttl: 'Visual refresh', dsc: "A new look without losing what already works" },
+        ] },
+        { ttl: 'Brand & Social Media', dsc: 'Visual identity, content, and social media management — in partnership with Natália Assis, specialist designer.', byline: 'in partnership with Natália Assis', category: 'design' },
+        { ttl: 'Digital Presence', dsc: '"Your brand deserves to look like what it already is."', category: 'business', subitems: [
+          { ttl: 'Social media content', dsc: 'Stories, carousel and feed with a consistent visual identity' },
+          { ttl: 'Website & sales pages', dsc: 'A professional home to call your own' },
+          { ttl: 'AI-generated professional photos', dsc: 'Realistic shoots for social, site, wherever you need' },
+          { ttl: 'Email marketing', dsc: 'Campaigns that actually reach the customer' },
+        ] },
+        { ttl: 'Automation & Systems', dsc: "I automate what's slowing your business down.", category: 'business', subitems: [
+          { ttl: 'Automated WhatsApp support', dsc: 'The "little bot" that answers and organizes customers for you' },
+          { ttl: 'Booking systems', dsc: 'Clients book themselves, no more back-and-forth messaging' },
+          { ttl: 'Custom systems', dsc: 'Inventory, cash flow, or client management, built your way' },
+          { ttl: 'General automations', dsc: 'Connecting the tools you already use, cutting manual repetitive work' },
+        ] },
+        { ttl: 'Education & Learning', dsc: 'E-books, materials and personalized learning systems.', category: 'business', subitems: [
+          { ttl: 'Digital e-books & materials', dsc: "Content that's beautiful, easy to read and easy to sell" },
+          { ttl: 'Personalized learning', dsc: "Systems built around each student's profile" },
+          { ttl: 'Gamification with characters', dsc: 'Progression that actually keeps people engaged' },
+          { ttl: 'Student & teacher portals', dsc: 'Manage classes, students and content in one place' },
+        ] },
       ],
     },
     process: {
@@ -161,27 +265,9 @@ export const TRANSLATIONS = {
       ],
     },
     work: {
-      eyebrow: 'Selected work', leadA: "Things I've ", leadB: 'built', leadC: '.',
-      aside: 'Nine recent projects across gamified learning, games, branding, and social media design. More on request.',
-      next: 'Next',
-      cards: {
-        nexus:         { badge: 'Driving License App', dsc: 'Platform connecting driving instructors with students — XP tracking, route challenges, and skill ladders. Designed and shipped from Figma to Ionic.' },
-        // TODO: Paola to fill in the real description (product goal and stack)
-        cartasMiticas: { badge: 'Roblox game', dsc: "Mythology-themed card game built in Roblox, combining collection/battle mechanics with an interface designed to reinforce the universe's fantasy — from card design to deck and progression screens." },
-        kynds:         { badge: 'Branding', dsc: 'Visual identity and brand materials.' },
-        // TODO: Paola to fill in the real description of what was delivered for Kynds (scope and deliverables)
-        schneider:     { badge: 'Gamified learning', dsc: 'Preparation system for the ISTQB CTFL 4.0 certification — streaks, progressive modules, engagement mechanics.' },
-        // TODO: Paola to fill in the real description (main feature and stack)
-        wondr:         { badge: 'Social media design', dsc: 'Visual direction and assets for social media.' },
-        // TODO: Paola to fill in the real description of what was delivered for Wondr (scope and deliverables)
-        designSystems: { badge: 'Design Systems', dsc: 'Ideation, creation, and development of a complete design system for brands and/or digital products.' },
-        bigshot:       { badge: 'Branding', dsc: 'Visual identity and brand materials.' },
-        // TODO: Paola to fill in the real description of what was delivered for BigShot (scope and deliverables)
-        english:       { badge: 'Study Portal', dsc: 'English learning web app with adaptive progression, schedule, notes, flashcards, and other resources.' },
-        // TODO: Paola to fill in the real description (main feature and stack)
-        switch:        { badge: 'Social media design', dsc: 'Visual direction and assets for social media.' },
-        // TODO: Paola to fill in the real description of what was delivered for Switch (scope and deliverables)
-      },
+      eyebrow: 'Selected work', leadA: 'Featured ', leadB: 'projects', leadC: '.',
+      aside: 'My most recent projects stay up to date on my Upwork profile.',
+      cta: 'See full profile',
     },
     exp: {
       eyebrow: 'Experience', leadA: 'Six years,', leadB: ' four chapters', leadC: '.',
@@ -216,18 +302,6 @@ export const TRANSLATIONS = {
     },
   },
 };
-
-export const PROJECTS_META = [
-  { id: 'nexus',         num: '01', ttl: 'Nexus Drive AI',  tags: ['Angular', 'Ionic', 'UI/UX'],            links: [], imgs: ['/assets/img/projetos/01-nexus-drive-ai.png', '/assets/img/projetos/1.1.png', '/assets/img/projetos/1.2.png'], url: 'nexusdrive.ai' },
-  { id: 'cartasMiticas', num: '02', ttl: 'Cartas Míticas',   tags: ['Roblox Studio', 'Lua', 'UI/UX'],        links: [], imgs: ['/assets/img/projetos/04-cartas-miticas-roblox.png', '/assets/img/projetos/4.1.png'] },
-  { id: 'kynds',         num: '03', ttl: 'Kynds',            tags: ['Figma', 'Photoshop', 'Canva'],          links: [{ type: 'live', label: 'Live', href: 'https://nataliasassis.myportfolio.com/kynds-identidade-visual' }], imgs: ['/assets/img/projetos/05-kynds.png', '/assets/img/projetos/5.1.png'] },
-  { id: 'schneider',     num: '04', ttl: 'Schneider QA',     tags: ['Angular', 'RxJS', 'Gamification'],      links: [{ type: 'live', label: 'Live', href: 'https://assispaola.github.io/bruno-qa/' }], imgs: ['/assets/img/projetos/02-schneider-qa.png', '/assets/img/projetos/2.1.png', '/assets/img/projetos/2.2.png'], url: 'assispaola.github.io/bruno-qa' },
-  { id: 'wondr',         num: '05', ttl: 'Wondr',            tags: ['Figma', 'Canva'],                      links: [{ type: 'live', label: 'Live', href: 'https://nataliasassis.myportfolio.com/copia-de-wondr-social-media' }], imgs: ['/assets/img/projetos/08-wondr.png', '/assets/img/projetos/8.1.png', '/assets/img/projetos/8.2.png'] },
-  { id: 'designSystems', num: '06', ttl: 'Design Systems',   tags: ['Figma', 'IA', 'Angular'],               links: [], imgs: ['/assets/img/projetos/06-design-systems.png'] },
-  { id: 'bigshot',       num: '07', ttl: 'BigShot',          tags: ['Figma', 'Photoshop', 'Canva'],          links: [{ type: 'live', label: 'Live', href: 'https://nataliasassis.myportfolio.com/big-shot-identidade-visual' }], imgs: ['/assets/img/projetos/07-bigShot.png', '/assets/img/projetos/7.1.png', '/assets/img/projetos/7.2.png'] },
-  { id: 'english',       num: '08', ttl: 'English Journey',  tags: ['Angular', 'RxJS', 'Forms'],             links: [{ type: 'live', label: 'Live', href: 'https://assispaola.github.io/english-da-lola/' }], imgs: ['/assets/img/projetos/03-english-journey.png', '/assets/img/projetos/3.1.png', '/assets/img/projetos/3.2.png'], url: 'assispaola.github.io/english-da-lola' },
-  { id: 'switch',        num: '09', ttl: 'Switch',           tags: ['Figma', 'Canva'],                      links: [{ type: 'live', label: 'Live', href: 'https://nataliasassis.myportfolio.com/copia-de-switch-social-media' }], imgs: ['/assets/img/projetos/09-switch.png', '/assets/img/projetos/9.1.png'] },
-];
 
 export const EXPERIENCES_META = [
   { date: 'Jul 2025 — Now', current: true, company: 'Certsys',               tags: ['Angular', 'Java', 'Oracle DB', 'TypeScript', 'Azure DevOps', 'Arquitetura Front-end'] },

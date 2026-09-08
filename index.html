@@ -5,23 +5,33 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Paola Assis — Developer &amp; Designer</title>
-  <meta name="description" content="Frontend Engineer especializada em Angular, Design Systems e aplicações gamificadas. São Paulo, BR."/>
+  <title>Paola Assis | Senior Frontend Developer &amp; UX/UI Designer</title>
+  <meta name="description" content="Paola Assis, desenvolvedora frontend sênior em Angular, Design Systems e produtos digitais gamificados. São Paulo — disponível para projetos remotos."/>
   <link rel="canonical" href="https://paolaassis.com/"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico" sizes="any"/>
-  <link rel="icon" type="image/png" href="/favicon.png"/>
-  <link rel="apple-touch-icon" href="/favicon.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://paolaassis.com/"/>
-  <meta property="og:title" content="Paola Assis — Developer &amp; Designer"/>
-  <meta property="og:description" content="Frontend Engineer especializada em Angular, Design Systems e aplicações gamificadas. São Paulo, BR."/>
+  <meta property="og:title" content="Paola Assis | Senior Frontend Developer &amp; UX/UI Designer"/>
+  <meta property="og:description" content="Desenvolvedora frontend sênior em Angular, Design Systems e produtos digitais gamificados. São Paulo — disponível para projetos remotos."/>
   <meta property="og:image" content="https://paolaassis.com/assets/img/og-image.png"/>
   <meta property="og:image:type" content="image/png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Paola Assis — Senior Frontend Developer &amp; UX/UI Designer"/>
   <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:site_name" content="Paola Assis"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Paola Assis | Senior Frontend Developer &amp; UX/UI Designer"/>
+  <meta name="twitter:description" content="Desenvolvedora frontend sênior em Angular, Design Systems e produtos digitais gamificados. São Paulo — disponível para projetos remotos."/>
+  <meta name="twitter:image" content="https://paolaassis.com/assets/img/og-image.png"/>
+  <meta name="twitter:image:alt" content="Paola Assis — Senior Frontend Developer &amp; UX/UI Designer"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -29,8 +39,8 @@
 
   <link rel="stylesheet" href="/css/tokens.css"/>
   <link rel="stylesheet" href="/css/base.css"/>
-  <link rel="stylesheet" href="/css/layout.css"/>
   <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/layout.css"/>
   <link rel="stylesheet" href="/css/animations.css"/>
 </head>
 <body>
@@ -96,10 +106,7 @@
     <!-- HERO -->
     <section class="section hero" id="top">
       <div class="hero-stage">
-        <div class="hero-bg" aria-hidden="true">
-          <img class="photo" src="/assets/img/2.png" alt="" loading="eager" fetchpriority="high"/>
-          <div class="scrim"></div>
-        </div>
+        <canvas class="hero-flow" id="hero-flow" aria-hidden="true"></canvas>
         <div class="shell hero-shell">
           <div class="hero-head">
             <div class="status">
@@ -150,12 +157,14 @@
           <span class="dot"></span><span class="num">01 /</span> <span data-i18n="about.eyebrow">Sobre</span>
         </div>
         <div class="about-grid">
-          <div class="about-portrait" data-reveal>
-            <div class="accent-blob"></div>
-            <img src="/assets/img/paola.png" alt="Paola Assis" loading="lazy"/>
-            <div class="corner">
-              <span>PAOLA ASSIS</span>
-              <span class="role">SP · BR</span>
+          <div class="about-portrait-sticky">
+            <div class="about-portrait" data-reveal>
+              <div class="accent-blob"></div>
+              <img src="/assets/img/paola.webp" alt="Paola Assis" loading="lazy"/>
+              <div class="corner">
+                <span>PAOLA ASSIS</span>
+                <span class="role">SP · BR</span>
+              </div>
             </div>
           </div>
           <div class="about-body" data-reveal data-reveal-delay="0.1">
@@ -206,67 +215,348 @@
           </h2>
           <p class="aside" data-i18n="services.aside">Frontend profundo, atenta a design...</p>
         </div>
+        <div class="services-tabs" role="tablist" data-services-tabs>
+          <button class="services-tab is-active" type="button" role="tab" data-tab-category="projects" data-i18n="services.tabs.projects">Projetos &amp; Sistemas</button>
+          <button class="services-tab" type="button" role="tab" data-tab-category="design" data-i18n="services.tabs.design">Design &amp; Produto</button>
+          <button class="services-tab" type="button" role="tab" data-tab-category="web" data-i18n="services.tabs.web">Web &amp; Marketing</button>
+          <button class="services-tab" type="button" role="tab" data-tab-category="business" data-i18n="services.tabs.business">Seu Negócio</button>
+        </div>
         <div class="services-grid" data-reveal data-reveal-delay="0.2">
-          <div class="service">
-            <div class="num">01</div>
+          <div class="service has-toggle" data-service data-category="projects">
             <span class="glyph"><span class="material-symbols-outlined">terminal</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.0.ttl">Soluções Customizadas</div>
-            <div class="dsc" data-i18n="services.items.0.dsc">Aplicações Angular sob medida...</div>
+            <div class="ttl" data-i18n="services.items.0.ttl">Sistemas Angular Complexos</div>
+            <div class="dsc" data-i18n="services.items.0.dsc">SaaS, CRM, dashboards e apps sob medida...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-0">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-0" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.0.subitems.0.ttl">Dashboards administrativos</div>
+                  <div class="sub-dsc" data-i18n="services.items.0.subitems.0.dsc">Painéis de controle com dados em tempo real e permissões por perfil</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.0.subitems.1.ttl">CRMs e sistemas internos</div>
+                  <div class="sub-dsc" data-i18n="services.items.0.subitems.1.dsc">Ferramentas sob medida pra times e processos específicos</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.0.subitems.2.ttl">Integração com APIs</div>
+                  <div class="sub-dsc" data-i18n="services.items.0.subitems.2.dsc">Consumo e orquestração de serviços externos</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.0.subitems.3.ttl">Arquitetura escalável</div>
+                  <div class="sub-dsc" data-i18n="services.items.0.subitems.3.dsc">Estrutura pensada pra crescer sem reescrever do zero</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">02</div>
+          <div class="service has-toggle" data-service data-category="projects">
             <span class="glyph"><span class="material-symbols-outlined">web</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.1.ttl">Sites Premium</div>
-            <div class="dsc" data-i18n="services.items.1.dsc">Sites institucionais e superfícies de produto...</div>
+            <div class="ttl" data-i18n="services.items.1.ttl">Front-end para Apps Móveis</div>
+            <div class="dsc" data-i18n="services.items.1.dsc">Do design das telas no Figma até a implementação...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-1">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-1" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.1.subitems.0.ttl">Telas em Figma</div>
+                  <div class="sub-dsc" data-i18n="services.items.1.subitems.0.dsc">Design de interface pronto pra desenvolvimento</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.1.subitems.1.ttl">Apps híbridos com Ionic</div>
+                  <div class="sub-dsc" data-i18n="services.items.1.subitems.1.dsc">Um código, iOS e Android</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.1.subitems.2.ttl">Navegação e fluxo de usuário</div>
+                  <div class="sub-dsc" data-i18n="services.items.1.subitems.2.dsc">Experiência pensada de ponta a ponta</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.1.subitems.3.ttl">Integração com back-end</div>
+                  <div class="sub-dsc" data-i18n="services.items.1.subitems.3.dsc">Conectando o app aos dados reais</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">03</div>
+          <div class="service has-toggle" data-service data-category="design">
             <span class="glyph"><span class="material-symbols-outlined">widgets</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.2.ttl">Design Systems</div>
-            <div class="dsc" data-i18n="services.items.2.dsc">Bibliotecas de componentes que vão pra produção...</div>
+            <div class="ttl" data-i18n="services.items.2.ttl">UX/UI Design</div>
+            <div class="dsc" data-i18n="services.items.2.dsc">Do wireframe ao protótipo de alta fidelidade...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-2">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-2" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.2.subitems.0.ttl">Wireframes</div>
+                  <div class="sub-dsc" data-i18n="services.items.2.subitems.0.dsc">Estrutura de baixa fidelidade validada antes do visual</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.2.subitems.1.ttl">Protótipos navegáveis</div>
+                  <div class="sub-dsc" data-i18n="services.items.2.subitems.1.dsc">Telas interativas pra testar antes de construir</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.2.subitems.2.ttl">Design systems</div>
+                  <div class="sub-dsc" data-i18n="services.items.2.subitems.2.dsc">Tokens, componentes e documentação</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.2.subitems.3.ttl">Handoff pra desenvolvimento</div>
+                  <div class="sub-dsc" data-i18n="services.items.2.subitems.3.dsc">Especificações prontas pro time técnico</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">04</div>
+          <div class="service has-toggle" data-service data-category="projects">
             <span class="glyph"><span class="material-symbols-outlined">sync_alt</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
             <div class="ttl" data-i18n="services.items.3.ttl">Modernização de Legado</div>
-            <div class="dsc" data-i18n="services.items.3.dsc">Migração de sistemas Angular antigos...</div>
+            <div class="dsc" data-i18n="services.items.3.dsc">Migração de AngularJS e versões antigas...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-3">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-3" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.3.subitems.0.ttl">Migração de AngularJS</div>
+                  <div class="sub-dsc" data-i18n="services.items.3.subitems.0.dsc">Atualização pra Angular moderno sem parar produção</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.3.subitems.1.ttl">Refatoração de código</div>
+                  <div class="sub-dsc" data-i18n="services.items.3.subitems.1.dsc">Estrutura mais limpa e sustentável</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.3.subitems.2.ttl">Atualização de dependências</div>
+                  <div class="sub-dsc" data-i18n="services.items.3.subitems.2.dsc">Segurança e performance em dia</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.3.subitems.3.ttl">Plano de migração gradual</div>
+                  <div class="sub-dsc" data-i18n="services.items.3.subitems.3.dsc">Sem big bang, sem quebrar o que funciona</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">05</div>
+          <div class="service has-toggle" data-service data-category="web">
             <span class="glyph"><span class="material-symbols-outlined">troubleshoot</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.4.ttl">Diagnóstico de UX</div>
-            <div class="dsc" data-i18n="services.items.4.dsc">Auditoria de fluxo e usabilidade...</div>
+            <div class="ttl" data-i18n="services.items.4.ttl">Sites, Landing Pages &amp; E-commerce</div>
+            <div class="dsc" data-i18n="services.items.4.dsc">Front-end na tecnologia certa pro objetivo do projeto...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-4">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-4" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.4.subitems.0.ttl">Landing pages de conversão</div>
+                  <div class="sub-dsc" data-i18n="services.items.4.subitems.0.dsc">Página focada em um objetivo claro</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.4.subitems.1.ttl">Lojas Shopify</div>
+                  <div class="sub-dsc" data-i18n="services.items.4.subitems.1.dsc">E-commerce completo, pronto pra vender</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.4.subitems.2.ttl">Sites institucionais</div>
+                  <div class="sub-dsc" data-i18n="services.items.4.subitems.2.dsc">Presença profissional pra qualquer negócio</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.4.subitems.3.ttl">Webflow, Framer ou WordPress</div>
+                  <div class="sub-dsc" data-i18n="services.items.4.subitems.3.dsc">A ferramenta certa pro seu caso</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">06</div>
+          <div class="service has-toggle" data-service data-category="web">
             <span class="glyph"><span class="material-symbols-outlined">sports_esports</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.5.ttl">UI/UX para Jogos &amp; Roblox</div>
-            <div class="dsc" data-i18n="services.items.5.dsc">Interfaces de jogo...</div>
+            <div class="ttl" data-i18n="services.items.5.ttl">Email Marketing &amp; Ciclo de Vida</div>
+            <div class="dsc" data-i18n="services.items.5.dsc">Campanhas completas do conceito no Figma...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-5">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-5" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.5.subitems.0.ttl">Emails responsivos</div>
+                  <div class="sub-dsc" data-i18n="services.items.5.subitems.0.dsc">Compatíveis com Gmail, Outlook e Apple Mail</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.5.subitems.1.ttl">Conteúdo dinâmico e segmentado</div>
+                  <div class="sub-dsc" data-i18n="services.items.5.subitems.1.dsc">Mensagem certa pra cada público</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.5.subitems.2.ttl">Templates reutilizáveis</div>
+                  <div class="sub-dsc" data-i18n="services.items.5.subitems.2.dsc">Consistência em cada campanha</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.5.subitems.3.ttl">Testes cross-client</div>
+                  <div class="sub-dsc" data-i18n="services.items.5.subitems.3.dsc">Garantia de que tudo funciona onde for aberto</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service">
-            <div class="num">07</div>
+          <div class="service has-toggle" data-service data-category="web">
+            <span class="glyph"><span class="material-symbols-outlined">slideshow</span></span>
+            <span class="arr material-symbols-outlined">arrow_outward</span>
+            <div class="ttl" data-i18n="services.items.6.ttl">Materiais de Marketing</div>
+            <div class="dsc" data-i18n="services.items.6.dsc">Peças que comunicam com a mesma qualidade do produto...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-6">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-6" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.6.subitems.0.ttl">Media kit</div>
+                  <div class="sub-dsc" data-i18n="services.items.6.subitems.0.dsc">Material de apresentação da marca pra parcerias e imprensa</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.6.subitems.1.ttl">Proposta comercial</div>
+                  <div class="sub-dsc" data-i18n="services.items.6.subitems.1.dsc">Documento que vende visualmente, não só em texto</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.6.subitems.2.ttl">Apresentações</div>
+                  <div class="sub-dsc" data-i18n="services.items.6.subitems.2.dsc">Slides organizados pra pitch, relatório ou reunião</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.6.subitems.3.ttl">Posts pra redes sociais</div>
+                  <div class="sub-dsc" data-i18n="services.items.6.subitems.3.dsc">Peças com identidade visual consistente</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service has-toggle" data-service data-category="design">
             <span class="glyph"><span class="material-symbols-outlined">draw</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <div class="ttl" data-i18n="services.items.6.ttl">Prototipagem &amp; Estratégia de Produto</div>
-            <div class="dsc" data-i18n="services.items.6.dsc">Do Design Thinking ao protótipo navegável...</div>
+            <div class="ttl" data-i18n="services.items.7.ttl">Redesign</div>
+            <div class="dsc" data-i18n="services.items.7.dsc">Repense tudo no Figma antes do código...</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-7">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-7" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.7.subitems.0.ttl">Redesign completo no Figma</div>
+                  <div class="sub-dsc" data-i18n="services.items.7.subitems.0.dsc">Repensar tudo antes do código</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.7.subitems.1.ttl">Evolução incremental</div>
+                  <div class="sub-dsc" data-i18n="services.items.7.subitems.1.dsc">Melhorias direto na implementação</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.7.subitems.2.ttl">Auditoria de UX</div>
+                  <div class="sub-dsc" data-i18n="services.items.7.subitems.2.dsc">Pontos de fricção mapeados e priorizados</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.7.subitems.3.ttl">Modernização visual</div>
+                  <div class="sub-dsc" data-i18n="services.items.7.subitems.3.dsc">Nova cara sem perder o que já funciona</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="service partner">
-            <div class="num">08</div>
+          <div class="service" data-category="design">
+            <span class="glyph"><span class="material-symbols-outlined">palette</span></span>
             <span class="arr material-symbols-outlined">arrow_outward</span>
-            <span class="glyph glyph-lg"><span class="material-symbols-outlined fs-32">palette</span></span>
-            <div class="body-col">
-              <div class="ttl" data-i18n="services.items.7.ttl">Brand &amp; Social Media</div>
-              <div class="dsc" data-i18n="services.items.7.dsc">Identidade visual, conteúdo e gestão de mídia social...</div>
-              <a class="byline" href="https://nataliasassis.myportfolio.com/work" target="_blank" rel="noreferrer">
-                <span data-i18n="services.items.7.byline">em parceria com Natália Assis</span>
-                <span class="material-symbols-outlined fs-12">arrow_outward</span>
-              </a>
+            <div class="ttl" data-i18n="services.items.8.ttl">Brand &amp; Social Media</div>
+            <div class="dsc" data-i18n="services.items.8.dsc">Identidade visual, conteúdo e gestão de mídia social...</div>
+            <a class="byline" href="https://nataliasassis.myportfolio.com/work" target="_blank" rel="noreferrer">
+              <span data-i18n="services.items.8.byline">em parceria com Natália Assis</span>
+              <span class="material-symbols-outlined fs-12">arrow_outward</span>
+            </a>
+          </div>
+          <div class="service has-toggle" data-service data-category="business">
+            <span class="glyph"><span class="material-symbols-outlined">auto_awesome</span></span>
+            <div class="ttl" data-i18n="services.items.9.ttl">Presença Digital</div>
+            <div class="dsc" data-i18n="services.items.9.dsc">"Sua marca merece parecer o que ela já é."</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-9">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-9" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.9.subitems.0.ttl">Posts pro Instagram</div>
+                  <div class="sub-dsc" data-i18n="services.items.9.subitems.0.dsc">Stories, carrossel e feed com identidade visual própria</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.9.subitems.1.ttl">Site e página de vendas</div>
+                  <div class="sub-dsc" data-i18n="services.items.9.subitems.1.dsc">Um lugar profissional pra chamar de seu</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.9.subitems.2.ttl">Fotos profissionais com IA</div>
+                  <div class="sub-dsc" data-i18n="services.items.9.subitems.2.dsc">Ensaio realista pra usar nas redes, site, onde quiser</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.9.subitems.3.ttl">Email marketing</div>
+                  <div class="sub-dsc" data-i18n="services.items.9.subitems.3.dsc">Campanhas bonitas que realmente chegam até o cliente</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service has-toggle" data-service data-category="business">
+            <span class="glyph"><span class="material-symbols-outlined">bolt</span></span>
+            <div class="ttl" data-i18n="services.items.10.ttl">Automação &amp; Sistemas</div>
+            <div class="dsc" data-i18n="services.items.10.dsc">Automatizo o que trava o dia a dia do seu negócio.</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-10">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-10" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.10.subitems.0.ttl">Atendimento automático no WhatsApp</div>
+                  <div class="sub-dsc" data-i18n="services.items.10.subitems.0.dsc">Aquele "robozinho" que responde e organiza os clientes por você</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.10.subitems.1.ttl">Sistema de agendamento</div>
+                  <div class="sub-dsc" data-i18n="services.items.10.subitems.1.dsc">Cliente marca sozinho, sem trocar 20 mensagens</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.10.subitems.2.ttl">Sistema sob medida</div>
+                  <div class="sub-dsc" data-i18n="services.items.10.subitems.2.dsc">Estoque, caixa, financeiro ou clientes, do seu jeito</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.10.subitems.3.ttl">Automações gerais</div>
+                  <div class="sub-dsc" data-i18n="services.items.10.subitems.3.dsc">Conecto as ferramentas que você já usa, sem trabalho manual repetido</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="service has-toggle" data-service data-category="business">
+            <span class="glyph"><span class="material-symbols-outlined">school</span></span>
+            <div class="ttl" data-i18n="services.items.11.ttl">Educação &amp; Aprendizagem</div>
+            <div class="dsc" data-i18n="services.items.11.dsc">E-books, apostilas e sistemas de aprendizagem personalizados.</div>
+            <button class="service-toggle" type="button" data-service-toggle aria-expanded="false" aria-controls="svc-acc-11">
+              <span data-i18n="services.toggleCta">Ver serviços</span>
+              <span class="toggle-icon material-symbols-outlined" aria-hidden="true">add</span>
+            </button>
+            <div class="service-accordion" id="svc-acc-11" data-service-accordion>
+              <div class="service-accordion-inner">
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.11.subitems.0.ttl">E-books e apostilas digitais</div>
+                  <div class="sub-dsc" data-i18n="services.items.11.subitems.0.dsc">Conteúdo bonito, fácil de ler e de vender</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.11.subitems.1.ttl">Aprendizagem personalizada</div>
+                  <div class="sub-dsc" data-i18n="services.items.11.subitems.1.dsc">Sistemas pensados pro perfil de cada aluno</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.11.subitems.2.ttl">Gamificação com personagens</div>
+                  <div class="sub-dsc" data-i18n="services.items.11.subitems.2.dsc">Progressão que engaja de verdade</div>
+                </div>
+                <div class="subitem">
+                  <div class="sub-ttl" data-i18n="services.items.11.subitems.3.ttl">Portal aluno e professor</div>
+                  <div class="sub-dsc" data-i18n="services.items.11.subitems.3.dsc">Gestão de turmas, alunos e conteúdo, num só lugar</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -274,21 +564,77 @@
     </section>
 
     <!-- WORK / PROJECTS -->
-    <section class="section" id="work">
+    <section class="section work-section" id="work">
       <div class="shell">
         <div class="section-eyebrow" data-reveal>
           <span class="dot"></span><span class="num">03 /</span> <span data-i18n="work.eyebrow">Trabalhos selecionados</span>
         </div>
-        <div class="section-head" data-reveal data-reveal-delay="0.1">
+        <div class="section-head work-head" data-reveal data-reveal-delay="0.1">
           <h2 class="h-display lead">
-            <span data-i18n="work.leadA">Coisas que </span><span class="italic" data-i18n="work.leadB">construí</span><span data-i18n="work.leadC">.</span>
+            <span data-i18n="work.leadA">Projetos em </span><span class="italic" data-i18n="work.leadB">destaque</span><span data-i18n="work.leadC">.</span>
           </h2>
-          <p class="aside" data-i18n="work.aside">Nove projetos recentes...</p>
+          <div class="work-head-side">
+            <p class="aside" data-i18n="work.aside">Os projetos mais recentes ficam sempre atualizados no meu perfil do Upwork.</p>
+            <a class="btn btn-primary work-head-cta" href="https://www.upwork.com/freelancers/paolaassis" target="_blank" rel="noreferrer">
+              <span data-i18n="work.cta">Ver todos os projetos</span>
+              <span class="material-symbols-outlined fs-16">arrow_outward</span>
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div class="project-showcase" data-reveal data-reveal-delay="0.2">
-          <div class="showcase-stage" data-showcase-stage></div>
-          <div class="showcase-thumbs" data-showcase-thumbs role="tablist"></div>
+      <div class="mockup-carousel" data-reveal data-reveal-delay="0.2">
+        <div class="mockup-row">
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2093553009361072128" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/01.png" alt="Projeto 01" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/1-1.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2094268163832983552" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/02.png" alt="Projeto 02" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/2-2.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2094975865797042176" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/03.png" alt="Projeto 03" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/3-3.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2095704266093727744" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/04.png" alt="Projeto 04" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/4-4.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+        </div>
+        <div class="mockup-row">
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2091736812508073984" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/05.png" alt="Projeto 05" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/5-5.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2084053175517421568" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/06.png" alt="Projeto 06" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/6-6.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2083841427746959360" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/07.png" alt="Projeto 07" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/7-7.png" alt="" loading="lazy"/>
+            </span>
+          </a>
+          <a class="mockup-card" href="https://www.upwork.com/freelancers/paolaassis?p=2084057537455169536" target="_blank" rel="noreferrer" aria-label="Ver projeto no Upwork">
+            <span class="mockup-card-media">
+              <img class="mockup-card-img mockup-card-img--default" src="/assets/img/projects/08.png" alt="Projeto 08" loading="lazy"/>
+              <img class="mockup-card-img mockup-card-img--hover" src="/assets/img/projects/8-8.png" alt="" loading="lazy"/>
+            </span>
+          </a>
         </div>
       </div>
     </section>
@@ -523,7 +869,7 @@
     <div class="shell">
       <div class="footer-top">
         <div class="brand-block">
-          <a href="#top" class="brand">
+          <a href="#top" class="brand" aria-label="Paola Assis">
             <span class="brand-mark">
               <svg width="100" height="102" viewBox="0 0 100 102" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M64.6887 6.81375C65.5637 7.57824 66.3988 8.38017 67.233 9.18924C67.5216 9.45229 67.5216 9.45229 67.8161 9.72065C71.6443 13.3156 74.6897 19.3096 74.9858 24.6183C74.9928 24.9602 74.9928 24.9602 75 25.309C75.0059 25.4707 75.0118 25.6323 75.0179 25.7989C75.1035 28.2749 74.9762 30.5756 74.4548 32.9987C74.3643 33.4237 74.3643 33.4237 74.2718 33.8574C74.2047 34.0943 74.1375 34.3312 74.0682 34.5752C73.8769 36.009 74.6229 37.3271 75.1621 38.6172C75.2873 38.9248 75.412 39.2326 75.5364 39.5406C75.8682 40.3593 76.2048 41.176 76.5424 41.9922C76.8646 42.7729 77.1831 43.555 77.5016 44.3372C77.6304 44.6535 77.7593 44.9697 77.8881 45.286C77.9533 45.446 78.0185 45.606 78.0857 45.7709C78.2918 46.2763 78.4985 46.7815 78.7052 47.2867C79.959 50.3536 81.1847 53.4316 82.4067 56.5115C82.5088 56.7688 82.6109 57.0261 82.7161 57.2912C82.8191 57.5509 82.9222 57.8106 83.0284 58.0783C83.2393 58.6099 83.4503 59.1415 83.6612 59.6732C83.8199 60.073 83.8199 60.073 83.9817 60.4808C85.1652 63.4621 86.3556 66.4406 87.5465 69.4189C87.7655 69.9669 87.9845 70.5148 88.2035 71.0627C89.0848 73.2673 89.9662 75.4719 90.848 77.6763C93.1448 83.4183 95.4382 89.1617 97.7086 94.9143C97.9145 95.4358 98.1207 95.9571 98.3271 96.4783C98.6103 97.1935 98.8924 97.9091 99.1741 98.6249C99.2585 98.8374 99.3428 99.0499 99.4297 99.2688C99.5054 99.4619 99.5812 99.6551 99.6592 99.854C99.7255 100.022 99.7917 100.19 99.8599 100.363C100 100.779 100 100.779 100 101.267C97.2767 101.267 94.5534 101.267 91.7476 101.267C91.3946 100.353 91.3946 100.353 91.0346 99.4202C89.3783 95.1339 87.7134 90.8514 86.0134 86.5824C85.9372 86.3912 85.8611 86.2 85.7827 86.0031C84.8926 83.7674 84.0001 81.5326 83.1072 79.2981C82.6112 78.0568 82.1159 76.8152 81.6209 75.5735C81.3147 74.8054 81.0081 74.0374 80.7007 73.2697C80.3572 72.4113 80.0146 71.5525 79.6723 70.6935C79.5679 70.4333 79.4634 70.173 79.3558 69.9048C79.2612 69.667 79.1667 69.4293 79.0693 69.1843C78.9862 68.9763 78.903 68.7682 78.8174 68.5538C78.6408 68.0508 78.6408 68.0508 78.6408 67.5623C76.8373 67.5789 75.0339 67.601 73.2306 67.6264C72.6196 67.6344 72.0086 67.6413 71.3976 67.6469C64.4479 67.7125 57.7503 68.3042 51.4563 71.4701C51.2946 71.5507 51.1329 71.6313 50.9663 71.7143C44.387 75.0507 40.4683 80.5454 37.3786 87.1014C36.3046 86.9841 35.6932 86.7946 34.8908 86.0634C34.6486 85.85 34.6486 85.85 34.4015 85.6322C33.3701 84.4447 33.3626 83.129 33.388 81.6146C33.575 80.1073 34.2275 78.8916 34.9515 77.5761C35.0857 77.3236 35.2199 77.0711 35.3582 76.811C36.2848 75.1348 37.3574 73.6602 38.5922 72.2029C38.7358 72.0228 38.8795 71.8427 39.0274 71.6571C44.8208 64.6466 54.8088 61.1788 63.5544 60.3476C67.514 60.059 71.5183 60.1972 75.4854 60.2352C74.5892 57.8176 73.6819 55.4047 72.7549 52.9989C72.5725 52.5256 72.3906 52.0521 72.2087 51.5785C72.0874 51.2632 71.9661 50.9479 71.8447 50.6326C71.7561 50.4026 71.7561 50.4026 71.6658 50.168C71.3499 49.3502 71.0289 48.5349 70.7012 47.7219C70.5999 47.4698 70.5999 47.4698 70.4964 47.2127C70.3664 46.8902 70.2355 46.5679 70.1039 46.2461C69.6602 45.1461 69.6602 45.1461 69.6602 44.6039C69.5 44.6039 69.3398 44.6039 69.1748 44.6039C69.1147 44.7393 69.0546 44.8746 68.9927 45.0141C66.4921 49.6851 61.3951 53.0711 57.0388 55.8389C56.7813 56.0042 56.5238 56.1694 56.2585 56.3397C52.8003 58.4445 48.9587 59.9908 45.0698 61.0747C44.7428 61.1661 44.7428 61.1661 44.4092 61.2593C43.333 61.5402 42.3138 61.7322 41.2024 61.7884C39.1814 61.8459 39.1814 61.8459 37.4857 62.8108C36.7228 63.8969 36.2439 65.1179 35.7468 66.3436C35.1721 67.6978 34.4776 68.9913 33.7985 70.2947C33.6547 70.5747 33.5108 70.8546 33.3626 71.143C31.8884 73.9991 30.2886 76.7725 28.6408 79.53C28.5085 79.7535 28.3762 79.977 28.2398 80.2073C23.3215 88.4985 16.5364 98.556 6.70836 101.248C4.43936 101.816 2.35049 102 0 102C0 99.985 0 97.9701 0 95.894C0.931129 95.6976 0.931129 95.6976 1.88107 95.4971C10.1281 93.6091 15.9021 85.7392 20.1911 78.9194C23.9467 72.855 27.254 66.5327 30.405 60.1332C30.8262 59.278 31.2487 58.4236 31.6717 57.5693C32.7202 55.451 33.7668 53.3317 34.8125 51.2119C35.6303 49.5541 36.4487 47.8967 37.2693 46.2403C37.6195 45.5331 37.969 44.8256 38.3174 44.1175C47.8071 24.8289 47.8071 24.8289 54.0798 22.3533C56.0583 21.7928 58.1624 21.8809 59.9894 22.8447C60.1371 22.9325 60.2847 23.0204 60.4369 23.1109C60.6822 23.2519 60.9275 23.393 61.1802 23.5383C61.3354 23.639 61.4906 23.7398 61.6505 23.8436C61.3159 24.6236 60.9512 25.0632 60.3004 25.599C58.0162 27.5585 56.1604 29.7392 54.3689 32.1477C54.2554 32.2987 54.1419 32.4496 54.0249 32.6052C50.3539 37.5204 47.5761 43.0213 44.8062 48.4819C44.2151 49.6413 43.6117 50.7941 43.0067 51.9463C42.3682 53.1552 42.3682 53.1552 41.7476 54.3734C48.28 52.3082 53.909 49.8003 58.9806 45.0924C59.1674 44.9217 59.3542 44.7511 59.5466 44.5752C62.9142 41.3536 65.2955 37.1256 66.5049 32.6362C66.594 32.3122 66.594 32.3122 66.685 31.9817C67.823 26.9461 66.7774 21.8295 64.0777 17.4934C60.6685 12.5451 55.112 9.23038 49.2484 8.15808C41.91 7.07715 34.442 8.3979 28.3981 12.8528C22.2238 17.5712 18.2003 23.9851 16.6044 31.6106C16.1135 35.4633 16.2786 39.4611 18.6893 42.65C20.2926 44.4072 22.4257 45.1762 24.6359 45.8861C24.8355 45.9516 25.0352 46.0171 25.2408 46.0846C25.7265 46.2437 26.2127 46.4009 26.699 46.5578C26.3566 47.337 26.0122 48.1152 25.6675 48.8933C25.5714 49.112 25.4754 49.3306 25.3764 49.5559C24.8247 50.7981 24.2378 51.9844 23.5437 53.1522C20.2043 53.0322 17.1773 51.4921 14.5631 49.4886C14.387 49.3589 14.2108 49.2292 14.0293 49.0956C11.7036 47.2381 10.1495 44.4691 9.2233 41.673C9.14602 41.4447 9.06874 41.2165 8.98912 40.9813C6.91924 33.6578 9.35785 25.1543 12.9115 18.706C14.5904 15.764 16.6192 13.1208 18.932 10.6547C19.0954 10.4746 19.2587 10.2945 19.427 10.109C22.9249 6.39138 27.5255 3.80915 32.2816 2.10631C32.4341 2.05094 32.5866 1.99557 32.7438 1.93852C42.8882 -1.69127 56.2552 -0.310057 64.6887 6.81375Z"/></svg>
             </span>
@@ -532,7 +878,7 @@
           <p data-i18n="footer.blurb">Engenheira frontend especializada em Angular...</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.navigateH">Navegue</h4>
+          <h3 data-i18n="footer.navigateH">Navegue</h3>
           <ul>
             <li><a href="#about" data-i18n="footer.links.about">Sobre</a></li>
             <li><a href="#services" data-i18n="footer.links.services">Serviços</a></li>
@@ -542,16 +888,16 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.elsewhereH">Em outros lugares</h4>
+          <h3 data-i18n="footer.elsewhereH">Em outros lugares</h3>
           <ul>
             <li><a href="https://github.com/assispaola" target="_blank" rel="noreferrer">GitHub ↗</a></li>
             <li><a href="https://www.linkedin.com/in/assispaola/" target="_blank" rel="noreferrer">LinkedIn ↗</a></li>
-            <li><a href="https://www.upwork.com/freelancers/~0145151d59c5d3a95a?mp_source=share" target="_blank" rel="noreferrer">Upwork ↗</a></li>
+            <li><a href="https://www.upwork.com/freelancers/paolaassis" target="_blank" rel="noreferrer">Upwork ↗</a></li>
             <li><a href="https://wa.me/5511930499095" target="_blank" rel="noreferrer">WhatsApp ↗</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.reachH">Contato</h4>
+          <h3 data-i18n="footer.reachH">Contato</h3>
           <ul>
             <li><a href="mailto:paolasantos.assis@gmail.com">paolasantos.assis&#64;gmail.com</a></li>
             <li><a href="tel:+5511930499095">+55 (11) 93049-9095</a></li>
