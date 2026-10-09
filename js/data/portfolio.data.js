@@ -115,7 +115,7 @@ export const TRANSLATIONS = {
     },
     work: {
       eyebrow: 'Trabalhos selecionados', leadA: 'Projetos em ', leadB: 'destaque', leadC: '.',
-      aside: 'Os projetos mais recentes ficam sempre atualizados no meu perfil do Upwork.',
+      aside: 'Os projetos mais recentes ficam sempre atualizados no meu perfil do Behance.',
       cta: 'Ver todos os projetos',
     },
     exp: {
@@ -266,7 +266,7 @@ export const TRANSLATIONS = {
     },
     work: {
       eyebrow: 'Selected work', leadA: 'Featured ', leadB: 'projects', leadC: '.',
-      aside: 'My most recent projects stay up to date on my Upwork profile.',
+      aside: 'My most recent projects stay up to date on my Behance profile.',
       cta: 'See full profile',
     },
     exp: {
