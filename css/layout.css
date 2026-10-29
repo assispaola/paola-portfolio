@@ -13,7 +13,7 @@
     justify-content: center;
   }
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   /* Category pills can outgrow tablet/mobile widths — scroll instead of
      wrapping into a ragged multi-line block. */
@@ -34,30 +34,30 @@
     flex: 0 0 auto;
   }
   .contact-wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .footer-top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .mega-name {
     font-size: clamp(48px, 15vw, 180px);
     margin-top: 40px;
   }
   .exp-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .exp-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
   .process-wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .process-aside {
     position: static;
   }
   .certs-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .cert.education {
     grid-column: span 2;
@@ -84,7 +84,7 @@
   /* About sticky portrait only stacks on true mobile — tablet (641–1024)
      keeps the two-column layout and sticky behavior. */
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .about-portrait-sticky {
     position: static;
@@ -98,17 +98,17 @@
     max-width: 100%;
   }
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .service-toggle {
     min-height: 44px;
     padding: 12px 4px;
   }
   .field-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .footer-top {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .footer-bot {
     flex-direction: column;
@@ -121,12 +121,12 @@
     text-align: left;
   }
   .certs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .cert,
   .cert.education {
     grid-column: span 1;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 48px minmax(0, 1fr);
   }
   .nav-actions .nav-cta {
     display: none;
@@ -141,5 +141,53 @@
     align-items: center;
     text-align: center;
     padding-top: 20px;
+  }
+}
+
+/* Very small phones (≤ 400px, e.g. 360px Galaxy A55) */
+@media (max-width: 400px) {
+  .nav {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .nav-actions {
+    gap: 8px;
+  }
+  .lang-toggle button {
+    padding: 0 12px;
+  }
+  .brand .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .hero-cta {
+    gap: 12px;
+  }
+  .btn {
+    white-space: normal;
+  }
+  .hero-cta .btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .channel {
+    padding: 14px 16px;
+  }
+  .about-traits {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .process-step {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 16px;
+  }
+  .process-step .marker {
+    width: 40px;
+    height: 40px;
+  }
+  .process-steps::before {
+    left: 19px;
   }
 }
